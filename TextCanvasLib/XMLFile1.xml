@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScreenDoc>
+  <Content>
+    <Literal Line="1" Col="28" Value="Work with Members Using PDM"/>
+    <Field Usage="Output" Line="1" Col="70" Name="JobDate" 
+           DataDefn="char(10)"
+           Value="2015-02-14"/>
+    <Literal Line="3" Col="2" Value="File  . . . . . ."/>
+    <Field Usage="Both" Line="3" Col="22" Name="FileName" 
+           DataDefn="char(10)" Value="SRCSRC" />
+    <Literal Line="4" Col="2" Value="  Library . . . ."/>
+    <Field Usage="Both" Line="4" Col="24" Name="LibName" 
+           DataDefn="char(10)" Value="SR" />
+    <Literal Line="4" Col="45" Value="Position to  . . . . ."/>
+    <Field Usage="Both" Line="4" Col="70" Name="PosToMbr" 
+           DataDefn="char(10)" Value="" />
+    <Literal Line="6" Col="2" Value="Type options, press Enter."/>
+    <Literal Line="7" Col="3" Value="2=Edit"/>
+    <Literal Line="7" Col="18" Value="3=Copy"/>
+    <Literal Line="7" Col="26" Value="4=Delete"/>
+    <Literal Line="7" Col="35" Value="5=Display"/>
+    <Literal Line="7" Col="51" Value="6=Print"/>
+    <Literal Line="7" Col="61" Value="7=Rename"/>
+    
+    <Literal Line="8" Col="3" Value="8=Display description"/>
+    <Literal Line="8" Col="26" Value="9=Save"/>
+    <Literal Line="8" Col="34" Value="13=Change text"/>
+    <Literal Line="8" Col="50" Value="14=Compile"/>
+    <Literal Line="8" Col="62" Value="15=Create module..."/>
+    
+    <Literal Line="10" Col="2" Value="Opt"/>
+    <Literal Line="10" Col="7" Value="Member"/>
+    <Literal Line="10" Col="19" Value="Type"/>
+    <Literal Line="10" Col="31" Value="Text"/>
+    
+    <Field Usage="Both" Line="11" Col="2" Name="Opt01" DataDefn="char(2)" Value="" />
+    <Field Usage="Output" Line="11" Col="7" Name="Srcmbr01" DataDefn="char(10)" Value="SRC2097R" />
+    <Field Usage="Both" Line="11" Col="19" Name="Type01" DataDefn="char(10)" Value="SQLRPGLE" />
+    <Field Usage="Both" Line="11" Col="31" Name="Text01" DataDefn="char(50)" Value="parser tester" />
+    
+    <Field Usage="Both" Line="12" Col="2" Name="Opt02" DataDefn="char(2)" Value="" />
+    <Field Usage="Output" Line="12" Col="7" Name="Srcmbr02" DataDefn="char(10)" Value="SRC2098C" />
+    <Field Usage="Both" Line="12" Col="19" Name="Type02" DataDefn="char(10)" Value="C" />
+    <Field Usage="Both" Line="12" Col="31" Name="Text02" DataDefn="char(50)" Value="ile c timer." />
+    
+    <Field Usage="Both" Line="13" Col="2" Name="Opt03" DataDefn="char(2)" Value="" />
+    <Field Usage="Output" Line="13" Col="7" Name="Srcmbr03" DataDefn="char(10)" Value="SRC2099R" />
+    <Field Usage="Both" Line="13" Col="19" Name="Type03" DataDefn="char(10)" Value="SQLRPGLE" />
+    <Field Usage="Both" Line="13" Col="31" Name="Text03" DataDefn="char(50)" 
+           Value="call expression parse procedures" />
+    
+    <Field Usage="Both" Line="14" Col="2" Name="Opt04" DataDefn="char(2)" Value="" />
+    <Field Usage="Output" Line="14" Col="7" Name="Srcmbr04" DataDefn="char(10)" Value="SRC9001C" />
+    <Field Usage="Both" Line="14" Col="19" Name="Type04" DataDefn="char(10)" Value="CLLE" />
+    <Field Usage="Both" Line="14" Col="31" Name="Text04" DataDefn="char(50)" 
+           Value="create editor executables." />
+    
+    <Field Usage="Both" Line="15" Col="2" Name="Opt05" DataDefn="char(2)" Value="" />
+    <Field Usage="Output" Line="15" Col="7" Name="Srcmbr05" DataDefn="char(10)" Value="SRC9001CMD" />
+    <Field Usage="Both" Line="15" Col="19" Name="Type05" DataDefn="char(10)" Value="CMD" />
+    <Field Usage="Both" Line="15" Col="31" Name="Text05" DataDefn="char(50)" 
+           Value="create editor executables." />
+    
+    <Field Usage="Both" Line="16" Col="2" Name="Opt06" DataDefn="char(2)" Value="" />
+    <Field Usage="Output" Line="16" Col="7" Name="Srcmbr06" DataDefn="char(10)" Value="SRC9002C" />
+    <Field Usage="Both" Line="16" Col="19" Name="Type06" DataDefn="char(10)" Value="CLLE" />
+    <Field Usage="Both" Line="16" Col="31" Name="Text06" DataDefn="char(50)" 
+           Value="delete all editor heaps." />
+    
+    <Field Usage="Both" Line="17" Col="2" Name="Opt07" DataDefn="char(2)" Value="" />
+    <Field Usage="Output" Line="17" Col="7" Name="Srcmbr07" DataDefn="char(10)" Value="SRC9003C" />
+    <Field Usage="Both" Line="17" Col="19" Name="Type07" DataDefn="char(10)" Value="CLLE" />
+    <Field Usage="Both" Line="17" Col="31" Name="Text07" DataDefn="char(50)" 
+           Value="run utl7521 cmd to compile pgm." />
+    
+    <Field Usage="Both" Line="18" Col="2" Name="Opt08" DataDefn="char(2)" Value="" />
+    <Field Usage="Output" Line="18" Col="7" Name="Srcmbr08" DataDefn="char(10)" Value="SRC9004C" />
+    <Field Usage="Both" Line="18" Col="19" Name="Type08" DataDefn="char(10)" Value="CLLE" />
+    <Field Usage="Both" Line="18" Col="31" Name="Text08" DataDefn="char(50)" 
+           Value="reload release library." />
+    
+    <Literal Line="19" Col="73" Value="More..."/>
+    
+    <Literal Line="20" Col="2" Value="Parameters or command"/>
+    
+    <Literal Line="21" Col="2" Value="===>"/>
+    <Field Usage="Both" Line="21" Col="7" Name="ParmCmd" DataDefn="char(72)" Value="" />
+    
+    <Literal Line="22" Col="2" Value="F3=Exit"/>
+    <Literal Line="22" Col="19" Value="F4=Prompt"/>
+    <Literal Line="22" Col="41" Value="F5=Refresh"/>
+
+    <Literal Line="23" Col="2" Value="F9=Retrieve"/>
+  
+  </Content>
+</ScreenDoc>

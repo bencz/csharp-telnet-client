@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CDF39094-AD6B-4FA3-A6E1-DB382D4E60BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ehllapi</RootNamespace>
+    <AssemblyName>Ehllapi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Host\HostAccess.cs" />
+    <Compile Include="Api\QuerySession.cs" />
+    <Compile Include="Api\Structs\SessInfo.cs" />
+    <Compile Include="Api\Structs\SessName.cs" />
+    <Compile Include="CharAttrByte.cs" />
+    <Compile Include="ColorAttrByte.cs" />
+    <Compile Include="CommonScreens\DisplayMessagesScreen.cs" />
+    <Compile Include="CommonScreens\DisplayProgramMessagesScreen.cs" />
+    <Compile Include="CommonScreens\PromptStrseuScreen.cs" />
+    <Compile Include="CommonScreens\RecoverInteractiveJobScreen.cs" />
+    <Compile Include="CommonScreens\SignonScreen.cs" />
+    <Compile Include="CommonScreens\StrseuExitScreen.cs" />
+    <Compile Include="CommonScreens\Strseu\BrowseScreen.cs" />
+    <Compile Include="CommonScreens\Strseu\EditScreen.cs" />
+    <Compile Include="CommonScreens\Strseu\ExitScreen.cs" />
+    <Compile Include="CommonScreens\SystemRequestMenuScreen.cs" />
+    <Compile Include="CommonScreens\WrkmbrpdmScreen.cs" />
+    <Compile Include="CommonScreens\WrkmbrpdmScreen_SubfileRow.cs" />
+    <Compile Include="Common\DisplayLocation.cs" />
+    <Compile Include="DisplayScreen.cs" />
+    <Compile Include="DisplaySession.cs" />
+    <Compile Include="EhllapiCodes.cs" />
+    <Compile Include="Ehllapier.cs" />
+    <Compile Include="EhllapiExcp.cs" />
+    <Compile Include="Enums\CharacterColor.cs" />
+    <Compile Include="Enums\FieldEntryType.cs" />
+    <Compile Include="Enums\LaunchOptions.cs" />
+    <Compile Include="Enums\SessionStatus.cs" />
+    <Compile Include="Sessions\HostNotification\HostNotificationList.cs" />
+    <Compile Include="Sessions\HostNotification\HostNotificationItem.cs" />
+    <Compile Include="Sessions\CloseIntercept\CloseInterceptItem.cs" />
+    <Compile Include="Sessions\CloseIntercept\CloseInterceptList.cs" />
+    <Compile Include="Sessions\Intercept\HostIntercept.cs" />
+    <Compile Include="KeyboardKey.cs" />
+    <Compile Include="Messages\SessIdMessage.cs" />
+    <Compile Include="Presentation\LowPresentationSpace.cs" />
+    <Compile Include="Presentation\PresentationSpaceFieldExt.cs" />
+    <Compile Include="Sessions\Master\MasterSessionItem.cs" />
+    <Compile Include="Sessions\Master\MasterSessionList.cs" />
+    <Compile Include="Settings\EhllapiSettingsEntry.xaml.cs">
+      <DependentUpon>EhllapiSettingsEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wasEhllapiSettingsEntry.cs" />
+    <Compile Include="Common\FieldAttribute.cs" />
+    <Compile Include="OperatorInfoArea.cs" />
+    <Compile Include="Api\pcsapi.cs" />
+    <Compile Include="Presentation\PresentationSpace.cs" />
+    <Compile Include="PresentationSpaceBuffer.cs" />
+    <Compile Include="PresentationSpaceDim.cs" />
+    <Compile Include="Presentation\PresentationSpaceField.cs" />
+    <Compile Include="Presentation\PresentationSpacePixel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\EhllapiSettings.cs" />
+    <Compile Include="SessionScript.cs" />
+    <Compile Include="SessionAttributes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Settings\EhllapiSettingsEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes\ehllapi usage notes.txt" />
+    <Content Include="Notes\todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Api\HostAccess\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AutoCoder\AutoCoder.csproj">
+      <Project>{ac6039b3-9723-40b9-8569-1c16e70ffc7d}</Project>
+      <Name>AutoCoder</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

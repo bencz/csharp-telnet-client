@@ -1,0 +1,327 @@
+﻿<Window x:Class="ScreenDefnLib.Windows.WorkScreenItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScreenDefnLib.Windows"
+        xmlns:ac="clr-namespace:AutoCoder.Controls;assembly=AutoCoder"
+        xmlns:acuc="clr-namespace:AutoCoder.Controls;assembly=AutoCoder"
+        xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"        
+        xmlns:controls="clr-namespace:ScreenDefnLib.Controls"
+        xmlns:models="clr-namespace:ScreenDefnLib.Models"
+        mc:Ignorable="d"
+        Title="{Binding WindowTitle}"
+        Height="450" Width="525">
+
+  <Grid x:Name="grdMain">
+    <Grid.Resources>
+      <Style TargetType="{x:Type Label}">
+        <Setter Property="Margin" Value="2,0,4,0" />
+        <Setter Property="FontWeight" Value="Bold" />
+      </Style>
+      <Style TargetType="{x:Type TextBox}">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="Padding" Value="3" />
+      </Style>
+    </Grid.Resources>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="auto"></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <!-- prompt the columns of the ScreenItem. -->
+    <Grid Grid.Row="0">
+      <ContentControl Content="{Binding Path=Model}">
+        <ContentControl.Resources>
+          <DataTemplate DataType="{x:Type models:ScreenFieldModel}">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+              </Grid.RowDefinitions>
+
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+
+              <Label Grid.Row="0">Item type</Label>
+              <ac:EnumRadioButton Grid.Row="0" Grid.Column="1" 
+                          EnumValueChanged="EnumRadioButton_EnumValueChanged" 
+                          EnumValue="{Binding ItemType}"/>
+
+              <Label Grid.Row="2">Item name</Label>
+              <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" 
+             Text="{Binding Path=ItemName }" />
+
+              <Label Grid.Row="3">Length</Label>
+              <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Width="80" 
+             Text="{Binding Path=Length }" />
+
+              <Label Grid.Row="4">Row number</Label>
+
+              <acuc:NumericUpDown Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" 
+                        MinWidth="60"
+                          NumericValue="{Binding Mode=TwoWay, Path=RowNum}"/>
+
+              <Label Grid.Row="5">Column number</Label>
+              <acuc:NumericUpDown Grid.Row="5" Grid.Column="1" 
+                                  HorizontalAlignment="Left" MinWidth="60" 
+                                  NumericValue="{Binding Path=ColNum, Mode=TwoWay}" />
+
+              <Label Grid.Row="6">Display attribute</Label>
+              <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" Width="80" 
+             Text="{Binding Path=DsplyAttrText }" />
+
+              <Label Grid.Row="7">I/O usage</Label>
+              <ac:EnumRadioButton Grid.Row="7" Grid.Column="1" 
+                          EnumValue="{Binding Usage}"/>
+
+              <Label Grid.Row="8">Is optional</Label>
+              <CheckBox Grid.Row="8" Grid.Column="1" VerticalAlignment="Center"
+                        IsChecked="{Binding IsOptional}"/>
+
+              <Label Grid.Row="9">Match number</Label>
+              <acuc:NumericUpDown Grid.Row="9" Grid.Column="1" HorizontalAlignment="Left" 
+                          ValueChanged="NumericUpDown_ValueChanged"
+                          NumericValue="{Binding Mode=TwoWay, Path=MatchNum}"/>
+
+              <Label Grid.Row="10">Hover code</Label>
+              <TextBox Grid.Row="10" Grid.Column="1"  AcceptsReturn="True"
+                       VerticalScrollBarVisibility="Auto"
+                       FontFamily="Lucida console" FontSize="12"
+                       Tag="hover"
+                       Text="{Binding HoverCodeText}"/>
+
+              <GridSplitter Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2"
+                  Height="Auto" Width="Auto" 
+                            Background="Black"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+              <Label Grid.Row="12">Hover xaml</Label>
+              <TextBox Grid.Row="12" Grid.Column="1"  AcceptsReturn="True"
+                       VerticalScrollBarVisibility="Auto"
+                       FontFamily="Lucida console" FontSize="12"
+                       Tag="hover"
+                       Text="{Binding HoverXamlText}"/>
+            </Grid>
+          </DataTemplate>
+
+          <DataTemplate DataType="{x:Type models:ScreenLiteralModel}">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="*"/>
+              </Grid.RowDefinitions>
+
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+
+              <Label Grid.Row="0">Item type</Label>
+              <ac:EnumRadioButton Grid.Row="0" Grid.Column="1" 
+                          EnumValueChanged="EnumRadioButton_EnumValueChanged" 
+                          EnumValue="{Binding ItemType}"/>
+
+              <!-- 
+              <ac:EditableComboBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"
+                                  Margin="2"
+                          MinWidth="100"
+                          ItemsSource="{Binding ElementName=grdMain, Path=DataContext.SectionNameList}"
+                          Text="{Binding Path=SectionName}"/>
+              -->
+
+              <Label Grid.Row="2">Item name</Label>
+              <TextBox Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" 
+             Text="{Binding Path=ItemName }" />
+
+              <Label Grid.Row="3">Length</Label>
+              <TextBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Width="80" 
+             Text="{Binding Path=Length }" />
+
+              <Label Grid.Row="4">Row number</Label>
+              <acuc:NumericUpDown Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" 
+                        MinWidth="60"
+                          NumericValue="{Binding Mode=TwoWay, Path=RowNum}"/>
+
+              <Label Grid.Row="5">Column number</Label>
+              <acuc:NumericUpDown Grid.Row="5" Grid.Column="1" 
+                                  HorizontalAlignment="Left" MinWidth="60" 
+                                  NumericValue="{Binding Path=ColNum, Mode=TwoWay}" />
+
+              <Label Grid.Row="6">Display attribute</Label>
+              <TextBox Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left" Width="80" 
+             Text="{Binding Path=DsplyAttrText }" />
+
+              <Label Grid.Row="7">Is optional</Label>
+              <CheckBox Grid.Row="7" Grid.Column="1" VerticalAlignment="Center"
+                        IsChecked="{Binding IsOptional}"/>
+
+              <!-- Edit the list of allowed values of the literal.-->
+              <Label Grid.Row="8">Value</Label>
+              <acuc:ListEditableStringControl Grid.Row="8" Grid.Column="1" 
+                                              HorizontalAlignment="Left"
+                                              Height="60"
+                                              Items="{Binding ListValues}"/>
+
+              <Label Grid.Row="9">Match number</Label>
+
+              <acuc:NumericUpDown Grid.Row="9" Grid.Column="1" HorizontalAlignment="Left" 
+                          ValueChanged="NumericUpDown_ValueChanged"
+                          NumericValue="{Binding Mode=TwoWay, Path=MatchNum}"/>
+
+              <Label Grid.Row="10">Hover code</Label>
+              <TextBox Grid.Row="10" Grid.Column="1"  AcceptsReturn="True"
+                       VerticalScrollBarVisibility="Auto"
+                       FontFamily="Lucida console" FontSize="12"
+                       Tag="hover"
+                       Text="{Binding HoverCodeText}"/>
+
+              <GridSplitter Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2"
+                  Height="Auto" Width="Auto" 
+                            Background="Black"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+              <Label Grid.Row="12">Hover xaml</Label>
+              <TextBox Grid.Row="12" Grid.Column="1"  AcceptsReturn="True"
+                       VerticalScrollBarVisibility="Auto"
+                       FontFamily="Lucida console" FontSize="12"
+                       Tag="hover"
+                       Text="{Binding HoverXamlText}"/>
+
+            </Grid>
+          </DataTemplate>
+
+          <DataTemplate DataType="{x:Type models:ScreenSectionModel}">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="2*"></RowDefinition>
+              </Grid.RowDefinitions>
+
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+
+              <Label Grid.Row="0">Item type</Label>
+              <ac:EnumRadioButton Grid.Row="0" Grid.Column="1" 
+                          EnumValueChanged="EnumRadioButton_EnumValueChanged" 
+                          EnumValue="{Binding ItemType}"/>
+
+              <Label Grid.Row="1">Item name</Label>
+              <TextBox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" 
+             Text="{Binding Path=ItemName }" />
+
+              <Label Grid.Row="2">Row number</Label>
+              <acuc:NumericUpDown Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" 
+                        MinWidth="60"
+                          NumericValue="{Binding Mode=TwoWay, Path=RowNum}"/>
+
+              <Label Grid.Row="3">Column number</Label>
+              <acuc:NumericUpDown Grid.Row="3" Grid.Column="1" 
+                                  HorizontalAlignment="Left" MinWidth="60" 
+                                  NumericValue="{Binding Path=ColNum, Mode=TwoWay}" />
+
+              <Label Grid.Row="4">Section size</Label>
+              <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center" Text="{Binding DimAsText}"/>
+                <TextBlock Text="{Binding Path=Dim.a}"/>
+                <TextBlock Text="{Binding Path=Dim.b}"/>
+              </StackPanel>
+
+              <Label Grid.Row="5">Match number</Label>
+              <acuc:NumericUpDown Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" 
+                          ValueChanged="NumericUpDown_ValueChanged"
+                          NumericValue="{Binding Mode=TwoWay, Path=MatchNum}"/>
+
+              <Label Grid.Row="6">Purpose code</Label>
+              <ac:EnumRadioButton Grid.Row="6" Grid.Column="1" 
+                          EnumValue="{Binding PurposeCode}"/>
+
+              <Label Grid.Row="7">Repeat count</Label>
+              <acuc:NumericUpDown Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left" 
+                        MinWidth="40"
+                          NumericValue="{Binding Mode=TwoWay, Path=RepeatCount}"/>
+
+              <Label Grid.Row="8">Associated section</Label>
+              <TextBox Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left" Width="80" 
+             Text="{Binding Path=AssocSectionName }" />
+
+              <Label Grid.Row="9">Hover code</Label>
+              <TextBox Grid.Row="9" Grid.Column="1"  AcceptsReturn="True"
+                       VerticalScrollBarVisibility="Auto"
+                       FontFamily="Lucida console" FontSize="12"
+                       Tag="hover"
+                       Text="{Binding HoverCodeText}"/>
+
+              <GridSplitter Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2"
+                  Height="Auto" Width="Auto" 
+                            Background="Black"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+              <Label Grid.Row="11">Hover xaml</Label>
+              <TextBox Grid.Row="11" Grid.Column="1"  AcceptsReturn="True"
+                       FontFamily="Lucida console" FontSize="12"
+                       VerticalScrollBarVisibility="Auto"
+                       Tag="hover"
+                       Text="{Binding HoverXamlText}"/>
+
+              <GridSplitter Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="2"
+                  Height="Auto" Width="Auto" 
+                            Background="Black"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+
+              <controls:SectionItemsControl 
+                Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="2"
+                SectionHeader="{Binding}" />
+            </Grid>
+          </DataTemplate>
+
+        </ContentControl.Resources>
+      </ContentControl>
+    </Grid>
+
+    <StackPanel Grid.Row="1" Orientation="Horizontal">
+      <Button x:Name="butOK" Margin="3" Click="butOK_Click" Content="OK" />
+      <Button x:Name="butConvertToOutputField" Margin="3" 
+              Click="butConvertToOutputField_Click"
+              Content="Convert to output field" />
+    </StackPanel>
+  </Grid>
+</Window>

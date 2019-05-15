@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoCoder", "AutoCoder.csproj", "{AC6039B3-9723-40B9-8569-1C16E70FFC7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{F4110F0A-5FD1-4F57-9C18-21499E9451EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC6039B3-9723-40B9-8569-1C16E70FFC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6039B3-9723-40B9-8569-1C16E70FFC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6039B3-9723-40B9-8569-1C16E70FFC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6039B3-9723-40B9-8569-1C16E70FFC7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4110F0A-5FD1-4F57-9C18-21499E9451EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4110F0A-5FD1-4F57-9C18-21499E9451EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4110F0A-5FD1-4F57-9C18-21499E9451EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4110F0A-5FD1-4F57-9C18-21499E9451EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

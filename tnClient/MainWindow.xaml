@@ -1,0 +1,201 @@
+﻿  <Window x:Class="tnClient.MainWindow"
+        x:Name="winMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tnClient"
+        xmlns:lc="clr-namespace:tnClient.Controls"
+        xmlns:uc="clr-namespace:AutoCoder.Telnet.Controls;assembly=AutoCoder_Telnet"
+        xmlns:acuc="clr-namespace:AutoCoder.Controls;assembly=AutoCoder"
+        xmlns:defn="clr-namespace:ScreenDefnLib.Controls;assembly=ScreenDefnLib"
+        xmlns:self="clr-namespace:AutoCoder.Telnet.Models;assembly=AutoCoder_Telnet"       
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="625">
+    <Grid x:Name="grdMain">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+    <StackPanel Orientation="Horizontal">
+        <Menu HorizontalAlignment="Left"  Grid.Row="0"
+          Name="menu1" VerticalAlignment="Top" >
+          <MenuItem Header="Telnet" Click="MenuItem_Click"></MenuItem>
+        <MenuItem Header="Printer" Click="MenuItem_Click"></MenuItem>
+        <MenuItem Header="RunLog">
+          <MenuItem Header="Clear log" Click="MenuItem_Click"></MenuItem>
+          <MenuItem Header="Print log" Click="MenuItem_Click"></MenuItem>
+          <MenuItem Header="view special" Click="MenuItem_Click"></MenuItem>
+        </MenuItem>
+            <MenuItem Header="Read xml" Click="MenuItem_Click"></MenuItem>
+      <MenuItem Header="Report canvas items" Click="MenuItem_Click"></MenuItem>
+        <MenuItem Header="Send data" Click="MenuItem_Click"></MenuItem>
+        <MenuItem Header="Test" Click="MenuItem_Click"></MenuItem>
+        <MenuItem Header="Capture">
+          <MenuItem>
+            <MenuItem.Header>
+              <Grid>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="auto"></RowDefinition>
+                  <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="100"></ColumnDefinition>
+                  <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+            <Label Grid.Row="0" Grid.Column="0" 
+                   VerticalAlignment="Center">Capture folder:</Label>
+                <acuc:FolderPathTextBoxControl
+                  Grid.Row="0" Grid.Column="1"
+                               VerticalAlignment="Center" Width="240" 
+                               HorizontalAlignment="Left"
+                               FolderPathText="{Binding CaptureFolderPath}"/>
+                <Label Grid.Row="1" Grid.Column="0" 
+                   VerticalAlignment="Center">Auto capture</Label>
+                <CheckBox Grid.Row="1" Grid.Column="1" IsChecked="{Binding CaptureAuto}"/>
+              </Grid>
+            </MenuItem.Header>
+          </MenuItem>
+          <MenuItem Click="MenuItem_Click" Tag="Capture">
+            <MenuItem.Header>
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Capture"/>
+                <TextBlock FontWeight="Bold" Margin="5,0" 
+                           Text="{Binding Path=MatchScreenDefn.ScreenName}"/>
+              </StackPanel>
+            </MenuItem.Header>
+          </MenuItem>
+          <MenuItem Header="View captured screens" Tag="CaptureViewer" Click="MenuItem_Click" />
+        </MenuItem>
+        <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
+        </Menu>
+      
+      <ToolBar>
+        <ToggleButton Command="EditingCommands.ToggleBold" Name="btnBold">
+          <Image Source="Images/text_bold.png" Width="16" Height="16" />
+        </ToggleButton>
+        <ComboBox x:Name="cbFontSize" Width="50" IsEditable="True" 
+                  TextBoxBase.TextChanged="cbFontSize_TextChanged" />
+        <TextBlock Margin="5,0,2,0" VerticalAlignment="Center">Font size</TextBlock>
+        <acuc:NumericUpDown x:Name="udFontSize" ValueChanged="udFontSize_ValueChanged"/>
+
+      </ToolBar>
+    </StackPanel>
+
+    <TabControl x:Name="TabControl1" Grid.Row="1" Grid.Column="0"
+                    SelectedIndex="{Binding ElementName=winMain,Path=TabSelectedIndex}">
+            <TabItem Header="Log file">
+                <acuc:EnhancedListBox x:Name="lbLog" 
+                                     SelectionMode="Extended"
+                                     FontFamily="Lucida console" 
+                         ItemsSource="{Binding RunLog}"></acuc:EnhancedListBox>
+            </TabItem>
+
+            <TabItem Header="Canvas">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+          </Grid.RowDefinitions>
+          <Canvas x:Name="Canvas1" Background="Black" Focusable="True"></Canvas>
+          
+          <StatusBar Grid.Row="1">
+            <StatusBarItem>
+              <TextBlock x:Name="tbStatusBarMessage" />
+            </StatusBarItem>
+          </StatusBar>
+
+        </Grid>
+      </TabItem>
+
+      <TabItem Header="Data stream">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          <StackPanel Orientation="Horizontal">
+            <Menu HorizontalAlignment="Left"  Grid.Row="0"
+          Name="menu2" VerticalAlignment="Top" >
+              <MenuItem Header="Parse" Click="MenuItem2_Click"></MenuItem>
+              <MenuItem Header="wtd order detail" Click="MenuItem2_Click"></MenuItem>
+            </Menu>
+          </StackPanel>
+          <uc:DataStreamControl Grid.Row="1" x:Name="DataStreamControl1" 
+                                DataStreamName="{Binding DataStreamName}"
+                                ParseText="{Binding ParseText}" />
+        </Grid>
+      </TabItem>
+
+      <!-- prompt the telnet client settings.  The ApplySettings event is signaled when
+      the user clicks the Apply button on the control. -->
+      <TabItem Header="Settings">
+        <lc:ClientSettingsControl Model="{Binding Path=.}" 
+                                  ApplySettings="ClientSettingsControl_ApplySettings"  />
+      </TabItem>
+
+      <TabItem Header="ScreenDefn">
+        <defn:ScreenDefnCollectionControl 
+          MasterThread="{Binding MasterThread}"
+          ScreenDefnObservableList="{Binding ScreenDefnObservableList}" />
+      </TabItem>
+
+      <TabItem Header="Traffic">
+
+        <TreeView x:Name="tvTraffic" ItemsSource="{Binding TrafficItems}" >
+
+          <TreeView.ItemContainerStyle>
+            <Style TargetType="{x:Type TreeViewItem}">
+              <Setter Property="IsExpanded" 
+                                    Value="{Binding IsExpanded, Mode=TwoWay}"/>
+              <Setter Property="IsSelected" 
+                                    Value="{Binding IsSelected, Mode=TwoWay}"/>
+              <Setter Property="FontWeight" Value="Normal"/>
+              <Setter Property="FontSize" Value="12"/>
+              <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                  <Setter Property="FontWeight" Value="Bold"/>
+                </Trigger>
+              </Style.Triggers>
+            </Style>
+          </TreeView.ItemContainerStyle>
+
+          <TreeView.Resources>
+            <HierarchicalDataTemplate DataType="{x:Type self:TrafficLogItemTreeModel}" 
+                                      ItemsSource="{Binding Children}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Direction}"/>
+                <TextBlock Margin="5,0" Text="{Binding LogTimeText}"/>
+
+                <TextBlock Margin="5,0">
+                  <Hyperlink Command="{Binding PrintCommand}">Print</Hyperlink>
+                </TextBlock>
+
+              </StackPanel>
+            </HierarchicalDataTemplate>
+            
+            <HierarchicalDataTemplate DataType="{x:Type self:ReportHeaderModel}" 
+                                      ItemsSource="{Binding Children}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Title}"/>
+              </StackPanel>
+            </HierarchicalDataTemplate>
+            
+            <DataTemplate DataType="{x:Type self:ReportLineModel}">
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding LineText}" FontFamily="Lucida Console"/>
+              </StackPanel>
+            </DataTemplate>
+          </TreeView.Resources>
+        </TreeView>
+
+      </TabItem>
+    </TabControl>
+    </Grid>
+</Window>
+  

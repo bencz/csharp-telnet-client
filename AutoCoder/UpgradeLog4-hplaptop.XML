@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AutoCoder">
+</Property><Property Name="Solution File" Value="C:\src#\AutoCoder\AutoCoder.sln">
+</Property><Property Name="Date" Value="Wednesday, November 11, 2009">
+</Property><Property Name="Time" Value="12:27 PM">
+</Property><Property Name="Log Number" Value="4">
+</Property></Properties><Event ErrorLevel="0" Project="AutoCoder" Source="AutoCoder.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="AutoCoder" Source="AutoCoder.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Tester" Source="Tester\Tester.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Tester" Source="Tester\Tester.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="AutoCoder.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="AutoCoder.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AutoCoder.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Tester" Source="Tester\Tester.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

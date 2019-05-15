@@ -1,0 +1,5 @@
+﻿ScanPattern notes
+------------------------------------------------
+
+determine when match pattern is one of many or a match that replaces 
+when should multiple patterns 

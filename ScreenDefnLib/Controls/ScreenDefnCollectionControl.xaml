@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="ScreenDefnLib.Controls.ScreenDefnCollectionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ScreenDefnLib.Controls"
+             xmlns:cv="clr-namespace:ScreenDefnLib.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500">
+
+  <UserControl.Resources>
+    <cv:ScreenDefnToScreenDefnModelConverter x:Key="ScreenConverter" />
+  </UserControl.Resources>
+
+  <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="auto"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="auto"></ColumnDefinition>
+      <ColumnDefinition Width="*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+      
+    <Grid Grid.Row="0" Grid.Column="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto"></RowDefinition>
+      <RowDefinition Height="*"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Button x:Name="butAdd" Click="butAdd_Click">Add Screen Definition</Button>
+
+    <!-- list view on left side. List the names of defined screens. -->
+    <ListView  x:Name="lvScreenDefn" Grid.Column="0" Grid.Row="1" 
+               MouseDoubleClick="lvScreenDefn_MouseDoubleClick"
+               SelectionChanged="lvScreenDefn_SelectionChanged"
+              ItemsSource="{Binding Path=ScreenDefnObservableList}">
+
+      <ListView.View>
+        <GridView>
+          <GridViewColumn Width="140" Header="Screen name" 
+                                    DisplayMemberBinding="{Binding ScreenName}"  />
+          <GridViewColumn Width="110" Header="Namespace"  
+                                    DisplayMemberBinding="{Binding NamespaceName}" />
+        </GridView>
+      </ListView.View>
+
+        <ListView.ContextMenu>
+          <ContextMenu>
+              <MenuItem Header="Delete" Click="MenuItem_Click"></MenuItem>
+            <MenuItem Header="Change" Click="MenuItem_Click"></MenuItem>
+            <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
+          </ContextMenu>
+        </ListView.ContextMenu>
+
+      </ListView>
+    </Grid>
+
+    <local:ScreenDefnControl Grid.Row="0" Grid.Column="1" 
+              Model="{Binding CurrentScreenDefn}"
+                             MasterThread="{Binding MasterThread}"
+                             ModelChanged="ScreenDefnControl_ModelChanged"/>
+    
+
+  </Grid>
+</UserControl>

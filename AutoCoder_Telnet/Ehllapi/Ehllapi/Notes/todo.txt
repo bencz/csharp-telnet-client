@@ -1,0 +1,8 @@
+﻿client access monitor / ehllapi todo notes
+-------------------------------------------------------
+
+1.      right button click windows hook.
+        ClientAccessMonitor loads an array of hwnd which the hook DLL should refer
+        to when deciding what right button clicks should be canceled and relayed
+        to the ClientAccessMonitor window.
+

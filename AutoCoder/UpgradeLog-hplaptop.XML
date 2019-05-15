@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AutoCoder">
+</Property><Property Name="Solution File" Value="C:\src#\AutoCoder\AutoCoder.sln">
+</Property><Property Name="User Options File" Value="C:\src#\AutoCoder\AutoCoder.suo">
+</Property><Property Name="Date" Value="Sunday, February 11, 2007">
+</Property><Property Name="Time" Value="12:03 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="AutoCoder.sln" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AutoCoder.sln">
+</Event><Event ErrorLevel="0" Project="" Source="AutoCoder.suo" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AutoCoder.suo">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AutoCoder.csproj" Description="Project file successfully backed up as C:\src#\AutoCoder\Backup\AutoCoder.csproj">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AutoCoder.csproj.user" Description="Project user file successfully backed up as C:\src#\AutoCoder\Backup\AutoCoder.csproj.user">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AcArticle.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AcArticle.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AcCommon.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AcCommon.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AcEnumerator.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AcEnumerator.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AcHtmlControls.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AcHtmlControls.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AcHtmlTable.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AcHtmlTable.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AcWebControls_Article.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AcWebControls_Article.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AssemblyInfo.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AutoCoder.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AutoCoder.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Database\sql.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Database\sql.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="DemoControls\WccCoolButton.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\DemoControls\WccCoolButton.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="LoadMaster.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\LoadMaster.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\AcTcpClient.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\AcTcpClient.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\AnySocket.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\AnySocket.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Logger.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Logger.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\Common.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\Common.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\EmailAddress.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\EmailAddress.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3Client.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3Client.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3Component.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3Component.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3ConnectException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3ConnectException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3Credential.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3Credential.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3LoginException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3LoginException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3Message.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3Message.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3MessageComponents.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3MessageComponents.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3MessageException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3MessageException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3MissingBoundaryException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3MissingBoundaryException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3Parse.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3Parse.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3ReceiveException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3ReceiveException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3SendException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3SendException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3StateObject.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3StateObject.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMailo\Pop3Statics.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMailo\Pop3Statics.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\MailDropMessage.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\MailDropMessage.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\MimeAttachment.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\MimeAttachment.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\MimeContentTypeLine.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\MimeContentTypeLine.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\MimeMessagePart.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\MimeMessagePart.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\MimeParser.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\MimeParser.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\MimeTopPart.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\MimeTopPart.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\PartProperty.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\PartProperty.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3Client.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3Client.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3Component.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3Component.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3ConnectException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3ConnectException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3Credential.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3Credential.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3LoginException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3LoginException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3Message.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3Message.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3MessageComponents.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3MessageComponents.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3MessageException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3MessageException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3Parse.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3Parse.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3ReceiveException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3ReceiveException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3SendException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3SendException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\Pop3Statics.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\Pop3Statics.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\InMail\SockThreadState.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\InMail\SockThreadState.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\MailEvent.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\MailEvent.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\MailMessageLine.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\MailMessageLine.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\MimeCommon.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\MimeCommon.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMailo\Attachment.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMailo\Attachment.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMailo\MailEncoder.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMailo\MailEncoder.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMailo\MailHeader.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMailo\MailHeader.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMailo\MailMessage.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMailo\MailMessage.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMailo\MalformedAddressException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMailo\MalformedAddressException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMailo\ParseException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMailo\ParseException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMailo\Smtp.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMailo\Smtp.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMailo\SmtpConfig.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMailo\SmtpConfig.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMail\Attachment.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMail\Attachment.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMail\MailEncoder.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMail\MailEncoder.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMail\MailHeader.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMail\MailHeader.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMail\MailMessage.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMail\MailMessage.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMail\MalformedAddressException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMail\MalformedAddressException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMail\OutMailer.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMail\OutMailer.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMail\ParseException.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMail\ParseException.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\OutMail\SmtpConfig.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\OutMail\SmtpConfig.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\Mail\RecipientList.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\Mail\RecipientList.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\MessageHeaderString.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\MessageHeaderString.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\MimeEncodedWord.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\MimeEncodedWord.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\MimeHeaderLineBuilder.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\MimeHeaderLineBuilder.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\MimeHeaderLineTraits.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\MimeHeaderLineTraits.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\NetworkCommon.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\NetworkCommon.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\QuotedPrintable.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\QuotedPrintable.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\ServerConnection.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\ServerConnection.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\ServerTransaction.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\ServerTransaction.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\ServerTransactionCompletionInfo.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\ServerTransactionCompletionInfo.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Network\SocketExchange.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Network\SocketExchange.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Pairs.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Pairs.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Stacks.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Stacks.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="StringUtil.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\StringUtil.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="TextStmt\other.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\TextStmt\other.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="TextStmt\TextStmt.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\TextStmt\TextStmt.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Text\CsvString.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Text\CsvString.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Text\FilePath.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Text\FilePath.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Text\Other.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Text\Other.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Text\Scanner.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Text\Scanner.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Text\SplitResults.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Text\SplitResults.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Text\Stringer.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Text\Stringer.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Text\TextTraits.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Text\TextTraits.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\AccountPrompts\AccountLogin.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\AccountPrompts\AccountLogin.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\AccountPrompts\Common.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\AccountPrompts\Common.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\AccountPrompts\NewAccount.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\AccountPrompts\NewAccount.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\AspControls.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\AspControls.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\Classes\Menu.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\Classes\Menu.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\HorizontalMenu\HorizontalMenu.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\HorizontalMenu\HorizontalMenu.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\HtmlControls.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\HtmlControls.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\RowPrompt\ColumnPrompt.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\RowPrompt\ColumnPrompt.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\RowPrompt\ColumnPromptCollection.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\RowPrompt\ColumnPromptCollection.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\RowPrompt\RowPrompt.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\RowPrompt\RowPrompt.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebControls\ServerControlBase.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebControls\ServerControlBase.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebTables\AcAccountMaster.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebTables\AcAccountMaster.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebTables\AcLoadMaster.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebTables\AcLoadMaster.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebTables\UserMaster.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebTables\UserMaster.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="WebTables\VisitorMaster.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\WebTables\VisitorMaster.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Web\AcPage.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Web\AcPage.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Web\AcUserControl.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Web\AcUserControl.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Web\GeoBytes.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Web\GeoBytes.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="Web\Utility.cs" Description="File successfully backed up as C:\src#\AutoCoder\Backup\Web\Utility.cs">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="todo.txt" Description="File successfully backed up as C:\src#\AutoCoder\Backup\todo.txt">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AcWebControls_Article.resx" Description="File successfully backed up as C:\src#\AutoCoder\Backup\AcWebControls_Article.resx">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AutoCoder.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="AutoCoder" Source="AutoCoder.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="AutoCoder.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="AutoCoder.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AutoCoder" Source="AutoCoder.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

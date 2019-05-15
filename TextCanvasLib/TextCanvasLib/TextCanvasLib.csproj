@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DD987A5-F2E9-4676-B9C6-9A91B2B26CF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TextCanvasLib</RootNamespace>
+    <AssemblyName>TextCanvasLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeAnalysis, Version=1.3.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Canvas\CanvasCommon.cs" />
+    <Compile Include="Canvas\CanvasDefn.cs" />
+    <Compile Include="Controls\KeyMapControl.xaml.cs">
+      <DependentUpon>KeyMapControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\KeyAction.cs" />
+    <Compile Include="Hover\HoverBox.cs" />
+    <Compile Include="Hover\HoverTimer.cs" />
+    <Compile Include="Common\FieldFormatWord.cs" />
+    <Compile Include="Common\FontDefn.cs" />
+    <Compile Include="Common\IDataStreamReport.cs" />
+    <Compile Include="Common\LogFile.cs" />
+    <Compile Include="ContentExt\ScreenContentExt.cs" />
+    <Compile Include="ContentExt\WindowScreenContent.cs" />
+    <Compile Include="Controls\ClientTextBlock.xaml.cs">
+      <DependentUpon>ClientTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\HowAdvance.cs" />
+    <Compile Include="Enums\VisualFeature.cs" />
+    <Compile Include="Ext\IRowColExt.cs" />
+    <Compile Include="Ext\KeyExt.cs" />
+    <Compile Include="Ext\StringExt.cs" />
+    <Compile Include="Canvas\CanvsCaret.cs" />
+    <Compile Include="Canvas\ItemCanvas.cs" />
+    <Compile Include="Canvas\CanvasPositionCursor.cs" />
+    <Compile Include="Common\LocatedString.cs" />
+    <Compile Include="Ext\TextBlockExt.cs" />
+    <Compile Include="Hover\HoverWindow.cs" />
+    <Compile Include="Keybd\ModifiedKey.cs" />
+    <Compile Include="Keybd\MappedModifiedKey.cs" />
+    <Compile Include="Keybd\ShiftedKey.cs" />
+    <Compile Include="Telnet\Common5250Ext.cs" />
+    <Compile Include="Telnet\ConnectedSocketPackExt.cs" />
+    <Compile Include="Telnet\SaveScreenCommandExt.cs" />
+    <Compile Include="Telnet\WorkstationCommandListExt.cs" />
+    <Compile Include="Telnet\WriteToDisplayCommandExt.cs" />
+    <Compile Include="Telnet\wtdReportExt.cs" />
+    <Compile Include="ThreadMessages\AssignItemCanvasMessage.cs" />
+    <Compile Include="ThreadMessages\AssignScreenDefnListMessage.cs" />
+    <Compile Include="ThreadMessages\Hover\CanvasHoverMessage.cs" />
+    <Compile Include="ThreadMessages\CaptureAttributesMessage.cs" />
+    <Compile Include="ThreadMessages\CaptureContentMessage.cs" />
+    <Compile Include="ThreadMessages\Hover\DelayHoverMessage.cs" />
+    <Compile Include="ThreadMessages\Hover\HoverMessageBase.cs" />
+    <Compile Include="ThreadMessages\Hover\ResumeHoverMessage.cs" />
+    <Compile Include="ThreadMessages\Hover\SuspendHoverMessage.cs" />
+    <Compile Include="ThreadMessages\MatchScreenDefnMessage.cs" />
+    <Compile Include="Threads\CaptureThread.cs" />
+    <Compile Include="Threads\MasterThread.cs" />
+    <Compile Include="Threads\MatchThread.cs" />
+    <Compile Include="Threads\PaintThread.cs" />
+    <Compile Include="Threads\PrinterThread.cs" />
+    <Compile Include="Visual\IVisualItem.cs" />
+    <Compile Include="Visual\IVisualItemEntry.cs" />
+    <Compile Include="Visual\IVisualItemMore.cs" />
+    <Compile Include="Visual\ScreenVisualItems.cs" />
+    <Compile Include="Visual\VisualItem.cs" />
+    <Compile Include="Visual\VisualItemCursor.cs" />
+    <Compile Include="Visual\VisualItemLinkedList.cs" />
+    <Compile Include="Visual\VisualItemLinkedListNode.cs" />
+    <Compile Include="Visual\VisualRow.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Visual\VisualSpanner.cs" />
+    <Compile Include="Visual\VisualTextBlock.cs" />
+    <Compile Include="Show\ShowFieldItem.cs" />
+    <Compile Include="Show\ShowLiteralItem.cs" />
+    <Compile Include="Show\ScreenDocReader.cs" />
+    <Compile Include="Show\ShowItemBase.cs" />
+    <Compile Include="Show\ShowItemList.cs" />
+    <Compile Include="Visual\VisualTextBlockSegment.cs" />
+    <Compile Include="Windows\CanvasWindow.xaml.cs">
+      <DependentUpon>CanvasWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AutoCoder\AutoCoder.csproj">
+      <Project>{ac6039b3-9723-40b9-8569-1c16e70ffc7d}</Project>
+      <Name>AutoCoder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AutoCoder_Code\AutoCoder_Code\AutoCoder_Code.csproj">
+      <Project>{e5738f3b-f601-4857-8b11-04ab712a6b5e}</Project>
+      <Name>AutoCoder_Code</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AutoCoder_Telnet\AutoCoder_Telnet\AutoCoder_Telnet.csproj">
+      <Project>{4e89cd7f-06db-4672-8b7b-4d997a112019}</Project>
+      <Name>AutoCoder_Telnet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\itextsharp\itextsharp.csproj">
+      <Project>{84c4fdd9-3ed7-453b-b9da-b3ed52cb071c}</Project>
+      <Name>itextsharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ScreenDefnLib\ScreenDefnLib.csproj">
+      <Project>{86FBACFC-E39D-41E1-B539-A63BCE09E9F8}</Project>
+      <Name>ScreenDefnLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\ClientTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\KeyMapControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CanvasWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

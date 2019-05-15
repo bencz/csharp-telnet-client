@@ -1,0 +1,52 @@
+﻿<!-- an ItemsControl that is used to edit the strings of a list.
+     Each string in the list is bound to a TextBox in the ItemsControl. -->
+  
+  <UserControl x:Class="AutoCoder.Controls.ListEditableStringControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AutoCoder.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+  <Grid x:Name="LayoutRoot">
+
+    <Popup Name="Popup1"
+           Placement="Mouse" 
+           IsOpen="False" AllowsTransparency="True"
+           StaysOpen="False">
+
+      <Border BorderThickness="1" Opacity="0.8" 
+                Background="AntiqueWhite">
+        <TextBlock x:Name="PopupText" />
+      </Border>
+    </Popup>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Auto">
+      <ItemsControl x:Name="ItemsControl1" ItemsSource="{Binding LineCollection}"
+                    PreviewMouseLeftButtonDown="ItemsControl1_PreviewMouseLeftButtonDown"
+                    PreviewMouseRightButtonDown="ItemsControl1_PreviewMouseRightButtonDown"
+                         FontFamily="Lucida console" FontSize="14">
+
+        <ItemsControl.ItemTemplate>
+          <DataTemplate>
+            <!-- bind the ContextMenu of each TextBox in the ItemsControl to the 
+                 ContextMenu named Context1. -->
+            <TextBox Text="{Binding Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                       TextChanged="TextBox_TextChanged"
+                       Tag="{Binding Path=.}"
+                       ContextMenu="{Binding ElementName=Context1}" />
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+
+        <ItemsControl.ContextMenu>
+          <ContextMenu x:Name="Context1">
+            <MenuItem Header="Delete" Click="ContextMenu_Click"/>
+            <MenuItem Header="Insert" Click="ContextMenu_Click"/>
+          </ContextMenu>
+        </ItemsControl.ContextMenu>
+      </ItemsControl>
+    </ScrollViewer>
+  </Grid>
+</UserControl>

@@ -1,0 +1,125 @@
+﻿<Window x:Class="TelnetTester.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TelnetTester"
+        xmlns:com="clr-namespace:TelnetTester.Common"
+        xmlns:uc="clr-namespace:AutoCoder.Telnet.Controls;assembly=AutoCoder_Telnet"
+        mc:Ignorable="d"
+        Title="Telnet tester" Height="350" Width="525">
+    <Grid x:Name="grdMain">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu HorizontalAlignment="Left"  Grid.Row="0"
+          Name="menu1" VerticalAlignment="Top" >
+            <MenuItem Header="Test" Click="MenuItem_Click"></MenuItem>
+            <MenuItem Header="Parse server stream" Click="MenuItem_Click"></MenuItem>
+            <MenuItem Header="Parse response stream" Click="MenuItem_Click"></MenuItem>
+            <MenuItem Header="Print" Click="MenuItem_Click"></MenuItem>
+      <MenuItem Header="Clear log" Click="MenuItem_Click"></MenuItem>
+      <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
+        </Menu>
+
+        <TabControl x:Name="TabControl1" Grid.Row="1" Grid.Column="0"
+                    SelectedIndex="{Binding TabSelectedIndex}">
+            <TabItem Header="Log file">
+                <com:NewListBox x:Name="lbLog" SelectionMode="Extended" 
+                         PreviewKeyDown="lbLog_PreviewKeyDown"
+                         FontFamily="Lucida console" FontSize="14"
+                         ItemsSource="{Binding RunLog}"></com:NewListBox>
+            </TabItem>
+
+            <TabItem Header="Canvas">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+          
+          <Menu HorizontalAlignment="Left"  Grid.Row="0"
+                x:Name="menu2" VerticalAlignment="Top" >
+            <MenuItem Header="Report items" Click="menu2_Click" ></MenuItem>
+          </Menu>
+
+          <Canvas Grid.Row="1" x:Name="Canvas1" Background="Blue" 
+                    MouseDown="Canvas1_MouseDown"></Canvas>
+        </Grid>
+      </TabItem>
+      <TabItem Header="Data stream">
+        <Grid>
+          <uc:DataStreamControl x:Name="DataStreamControl1" 
+                                DataStreamName="{Binding DataStreamName}"
+                                ParseText="{Binding ParseText}"/>
+        </Grid>
+      </TabItem>
+
+            <TabItem Header="Settings">
+                <Grid>
+
+                    <Grid.Resources>
+                        <Style TargetType="{x:Type Label}">
+                            <Setter Property="Margin" Value="2,0,4,0" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                        </Style>
+                    </Grid.Resources>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0">Connect to system</Label>
+                    <ComboBox  Grid.Row="0" Grid.Column="1" Width="120" 
+                               IsEditable="true" Background="Tomato"
+                               SelectedItem="{Binding SystemListSelectedItem }"
+    Text="{Binding SystemName, Mode=Default, UpdateSourceTrigger=LostFocus}"
+                ItemsSource="{Binding SystemList}" />
+
+
+                    <Label Grid.Row="1">Auto connect</Label>
+                    <CheckBox   VerticalAlignment="Center"
+                    IsChecked="{Binding Path=AutoConnect}"
+                              Grid.Row="1" Grid.Column="1">
+                    </CheckBox>
+                </Grid>
+            </TabItem>
+      <TabItem Header="Notepad">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+          </Grid.RowDefinitions>
+
+          <DockPanel Grid.Row="0" Grid.Column="0" LastChildFill="True" >
+            <Button x:Name="butEdit" DockPanel.Dock="Right"
+                    Margin="3" Padding="3"
+                    Click="butEdit_Click">Edit</Button>
+            <Button DockPanel.Dock="Right" x:Name="butTextFilePath" 
+                    Click="butTextFilePath_Click"
+              Content="..."
+              Margin="3" Padding="3"/>
+            <TextBox Text="{Binding TextFilePath}" MinWidth="80" Margin="3"/>
+          </DockPanel>
+
+          <RichTextBox x:Name="RichTextBox1" Grid.Row="1"
+                       Padding="10"
+                     TextOptions.TextRenderingMode="Aliased" AcceptsTab="True"
+                     AcceptsReturn="True" 
+                     VerticalScrollBarVisibility="Auto" >
+          </RichTextBox>
+        </Grid>
+      </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

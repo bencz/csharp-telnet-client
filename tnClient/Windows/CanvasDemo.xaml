@@ -1,0 +1,40 @@
+﻿<Window x:Class="tnClient.Windows.CanvasDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:tnClient.Windows"
+        mc:Ignorable="d"
+        Title="CanvasDemo" Height="300" Width="300">
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Menu HorizontalAlignment="Left"  Grid.Row="0"
+          Name="menu1" VerticalAlignment="Top" >
+                <MenuItem Header="Test" Click="MenuItem_Click"></MenuItem>
+            <MenuItem Header="Focus" Click="MenuItem_Click"></MenuItem>
+            <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
+            </Menu>
+
+        <TabControl x:Name="TabControl1" Grid.Row="1" Grid.Column="0" >
+            <TabItem Header="Log file">
+                <ListBox x:Name="lbLog"></ListBox>
+            </TabItem>
+
+            <TabItem x:Name="TabItem1" Header="Canvas">
+                <Canvas x:Name="Canvas1" Grid.Row="1"
+                PreviewKeyDown="Canvas1_PreviewKeyDown"
+            Background="Blue" Focusable="True">
+                    <TextBlock x:Name="TextBlock1" Text="abc" FontSize="18" Foreground="White"></TextBlock>
+                </Canvas>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

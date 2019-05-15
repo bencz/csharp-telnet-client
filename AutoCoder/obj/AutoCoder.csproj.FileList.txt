@@ -1,0 +1,8 @@
+bin\Debug\AutoCoder.dll
+bin\Debug\AutoCoder.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\AutoCoder.Web.ArticleShow.resources
+obj\Debug\AutoCoder.csproj.GenerateResource.Cache
+obj\Debug\AutoCoder.dll
+obj\Debug\AutoCoder.pdb
+obj\Debug\AutoCoder.Ftp.FtpCommand.xml

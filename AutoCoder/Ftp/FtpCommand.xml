@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FtpCommands>
+
+  <FtpCommand>
+    <Name>LIST</Name>
+    <Text>List detailed directory/library files</Text>
+    <DataChannel>Text</DataChannel>
+    <Parms>
+      <Parm>
+        <Number>0</Number>
+        <Name>GenericFileName</Name>
+      </Parm>
+    </Parms>
+  </FtpCommand>
+
+  <FtpCommand>
+    <Name>CWD</Name>
+    <Text>Change working directory</Text>
+    <DataChannel>None</DataChannel>
+    <Parms>
+      <Parm>
+        <Number>0</Number>
+        <Name>DirectoryPath</Name>
+      </Parm>
+    </Parms>
+  </FtpCommand>
+
+  <FtpCommand Name="LS" Text="List remove file names">
+    <DataChannel>Text</DataChannel>
+    <Parms>
+      <Parm Number="0"  Name="Name" />
+      <Parm Number="1" Name="Disk" />
+    </Parms>
+  </FtpCommand>
+
+  <FtpCommand Name="HELP" Text="List server help text">
+    <DataChannel>None</DataChannel>
+    <ReplyCodes>
+      <ReplyCode Value="214" Action="OK"/>
+    </ReplyCodes>
+    <Parms>
+      <Parm Number="0"  Name="Command" Text="The command help is requested of" Optional="true" />
+    </Parms>
+  </FtpCommand>
+
+  <FtpCommand Name="FEAT" Text="List server help text">
+    <DataChannel>None</DataChannel>
+    <ReplyCodes>
+      <ReplyCode Value="214" Action="OK"/>
+    </ReplyCodes>
+    <Parms>
+      <Parm Number="0"  Name="Command" Text="The command help is requested of" Optional="true" />
+    </Parms>
+  </FtpCommand>
+
+</FtpCommands>

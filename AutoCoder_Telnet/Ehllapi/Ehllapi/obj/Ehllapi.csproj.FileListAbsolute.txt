@@ -1,0 +1,7 @@
+C:\src#\Ehllapi\Ehllapi\bin\Debug\Ehllapi.dll
+C:\src#\Ehllapi\Ehllapi\bin\Debug\Ehllapi.pdb
+C:\src#\Ehllapi\Ehllapi\bin\Debug\AutoCoder.dll
+C:\src#\Ehllapi\Ehllapi\bin\Debug\AutoCoder.pdb
+C:\src#\Ehllapi\Ehllapi\obj\Debug\ResolveAssemblyReference.cache
+C:\src#\Ehllapi\Ehllapi\obj\Debug\Ehllapi.dll
+C:\src#\Ehllapi\Ehllapi\obj\Debug\Ehllapi.pdb

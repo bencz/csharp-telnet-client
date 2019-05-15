@@ -1,0 +1,13 @@
+﻿ehllapi usage notes 
+------------------------------------------
+
+... session start .... ------ use Launch_ClientAccessSession to start a session -------
+
+
+    public static void Launch_ClientAccessSession(
+      EhllapiSettings InSettings, LaunchOptions InLaunchOptions)
+    {
+      Launch_ClientAccessSession(
+        InSettings, InSettings.Path_WrkstnProfile, InSettings.SessId,
+        InLaunchOptions);
+    }

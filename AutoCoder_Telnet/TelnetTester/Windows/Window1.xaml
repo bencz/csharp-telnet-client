@@ -1,0 +1,32 @@
+﻿<Window x:Class="TelnetTester.Windows.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TelnetTester.Windows"
+        xmlns:ac="clr-namespace:AutoCoder.Controls;assembly=AutoCoder"
+        xmlns:telnetControls="clr-namespace:AutoCoder.Telnet.Controls;assembly=AutoCoder_Telnet"
+        xmlns:testerControls="clr-namespace:TelnetTester.Controls"
+        mc:Ignorable="d"
+        Title="Window1" Height="300" Width="300">
+    <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto"></RowDefinition>
+      <RowDefinition Height="auto"></RowDefinition>
+      <RowDefinition Height="auto"></RowDefinition>
+      <RowDefinition Height="auto"></RowDefinition>
+      <RowDefinition Height="auto"></RowDefinition>
+      <RowDefinition Height="auto"></RowDefinition>
+    </Grid.RowDefinitions>
+    <ac:EnumRadioButton x:Name="radioButton1" EnumValue="{Binding dsplyAttr }" />
+
+    <TextBlock Grid.Row="1" Text="{Binding FirstName}" FontSize="18"/>
+
+    <telnetControls:ScreenDimControl Grid.Row="2" ScreenDim="{Binding Dim}"/>
+
+    <ac:BorderTextBlock Grid.Row="3" Text="{Binding FirstName}"/>
+
+    <Button x:Name="butOK" Grid.Row="5" Click="butOK_Click">OK</Button>
+
+  </Grid>
+</Window>

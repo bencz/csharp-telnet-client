@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC6039B3-9723-40B9-8569-1C16E70FFC7D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>AutoCoder</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AutoCoder</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="msmdvbanet, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcColumnInfo.cs" />
+    <Compile Include="AcCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AcEnumerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AcNamedValue.cs" />
+    <Compile Include="AcNamedValues.cs" />
+    <Compile Include="Attribute\DefaultConstructorAttribute.cs" />
+    <Compile Include="Attribute\FullConstructorAttribute.cs" />
+    <Compile Include="Attribute\IsEnum.cs" />
+    <Compile Include="Attribute\MakeClassAttr.cs" />
+    <Compile Include="Attribute\MakeFieldAttr.cs" />
+    <Compile Include="Attribute\PromptTextAttribute.cs" />
+    <Compile Include="Attribute\TitleTextAttribute.cs" />
+    <Compile Include="Collections\Arrayer.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Collections\LinkedListCursor.cs" />
+    <Compile Include="Collections\LinkedListExt.cs" />
+    <Compile Include="Collections\ListCursor.cs" />
+    <Compile Include="Collections\ListExt.cs" />
+    <Compile Include="Compiler\Enums\CompilerInputForm.cs" />
+    <Compile Include="Compiler\Enums\CompilerVersion.cs" />
+    <Compile Include="Compiler\Enums\ExecutableType.cs" />
+    <Compile Include="Compiler\Enums\GenerateAssemblyIn.cs" />
+    <Compile Include="Converter\PlusMinusConverter.cs" />
+    <Compile Include="Converter\VisibilityConverter.cs" />
+    <Compile Include="Core\Enums\AssignmentOperator.cs" />
+    <Compile Include="Core\Enums\BooleanOperator.cs" />
+    <Compile Include="Core\Enums\CompareOperator.cs" />
+    <Compile Include="Core\Enums\RelativePosition.cs" />
+    <Compile Include="Core\Enums\ValueOperator.cs" />
+    <Compile Include="Core\FrameworkTypes.cs" />
+    <Compile Include="Core\IWriteStatusMessage.cs" />
+    <Compile Include="Core\RunLogMessage.cs" />
+    <Compile Include="Drawing\BitmapCommon.cs" />
+    <Compile Include="Drawing\DrawString.cs" />
+    <Compile Include="Drawing\DrawStringList.cs" />
+    <Compile Include="Ext\BitmapSourceExt.cs" />
+    <Compile Include="Ext\CanvasExt.cs" />
+    <Compile Include="Ext\DecimalExt.cs" />
+    <Compile Include="Ext\DrawingContextExt.cs" />
+    <Compile Include="Ext\FrameworkElementExt.cs" />
+    <Compile Include="Ext\IntArrayExt.cs" />
+    <Compile Include="Ext\KeyExt.cs" />
+    <Compile Include="Ext\ProcessExt.cs" />
+    <Compile Include="Ext\RichTextBoxExt.cs" />
+    <Compile Include="Ext\SizeExt.cs" />
+    <Compile Include="Ext\StringBuilderExt.cs" />
+    <Compile Include="Ext\TextBoxExt.cs" />
+    <Compile Include="Ext\TextPointerExt.cs" />
+    <Compile Include="Ext\ThicknessExt.cs" />
+    <Compile Include="Ext\TreeViewItemExt.cs" />
+    <Compile Include="Ext\TypeExt.cs" />
+    <Compile Include="Ext\UIElementCollectionExt.cs" />
+    <Compile Include="Ext\XAttributeExt.cs" />
+    <Compile Include="File\DirName.cs" />
+    <Compile Include="File\FileBaseName.cs" />
+    <Compile Include="File\FileExtension.cs" />
+    <Compile Include="File\FlatFileSchema.cs" />
+    <Compile Include="Forms\ComboBoxer.cs" />
+    <Compile Include="Forms\DataGridViewCeller.cs" />
+    <Compile Include="Forms\DrawStringColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\ListBoxer.cs" />
+    <Compile Include="Forms\AutoSizeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IO\StreamReaderPipe.cs" />
+    <Compile Include="Linq\PredicateBuilder.cs" />
+    <Compile Include="Net\QueryStringBuilder.cs" />
+    <Compile Include="Net\ServiceUnavailableException.cs" />
+    <Compile Include="Net\WebHelper.cs" />
+    <Compile Include="Parse\CursorMatchPattern.cs" />
+    <Compile Include="Parse\CursorMatchPatterns.cs" />
+    <Compile Include="Collections\ITreeTraverse.cs" />
+    <Compile Include="Parse\ParseBufferLine.cs" />
+    <Compile Include="Parse\ParsedWordsReport.cs" />
+    <Compile Include="Parse\ParseBufferComplex.cs" />
+    <Compile Include="Parse\ParseTextLine.cs" />
+    <Compile Include="Parse\ParseTextLineComplex.cs" />
+    <Compile Include="Parse\StmtParser.cs" />
+    <Compile Include="Parse\StmtWordSpan.cs" />
+    <Compile Include="Parse\TextLineGuid.cs" />
+    <Compile Include="Collections\TreeCursor.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reflection\Reflectioner.cs" />
+    <Compile Include="Reflection\Typer.cs" />
+    <Compile Include="BufferBuilder.cs" />
+    <Compile Include="Collections\BinaryTree\BinaryTree.cs" />
+    <Compile Include="Collections\BinaryTree\BinaryTreeCursor.cs" />
+    <Compile Include="Collections\BinaryTree\BinaryTreeNode.cs" />
+    <Compile Include="Collections\BinaryTree\BinaryTree_AddNode.cs" />
+    <Compile Include="Collections\BinaryTree\BinaryTree_Balance.cs" />
+    <Compile Include="Collections\BinaryTree\BinaryTree_LevelSlot.cs" />
+    <Compile Include="Collections\BinaryTree\BinaryTree_Remove.cs" />
+    <Compile Include="Collections\KeyedLinkedList.cs" />
+    <Compile Include="Collections\Lister.cs" />
+    <Compile Include="COMInterop\IInitializeWithFile.cs" />
+    <Compile Include="COMInterop\IInitializeWithStream.cs" />
+    <Compile Include="COMInterop\MSG.cs" />
+    <Compile Include="COMInterop\RECT.cs" />
+    <Compile Include="Compiler\AcCompiler.cs" />
+    <Compile Include="Compiler\AcCompilerParameters.cs" />
+    <Compile Include="Compiler\AcCompilerResults.cs" />
+    <Compile Include="Core\CoreEnums.cs" />
+    <Compile Include="Core\FrameworkType.cs" />
+    <Compile Include="Core\PromptedProperty.cs" />
+    <Compile Include="File\DirPath.cs" />
+    <Compile Include="File\FileName.cs" />
+    <Compile Include="File\Filer.cs" />
+    <Compile Include="File\FullPath.cs" />
+    <Compile Include="File\RootPath.cs" />
+    <Compile Include="File\Pather.cs" />
+    <Compile Include="File\ScopePath.cs" />
+    <Compile Include="File\TextFile.cs" />
+    <Compile Include="File\TextFileCursor.cs" />
+    <Compile Include="File\TextLinesCursor.cs" />
+    <Compile Include="File\TextLinesWordCursor.cs" />
+    <Compile Include="Forms\AcComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\AcDecimalBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\AcDecimalLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Careter.cs" />
+    <Compile Include="Forms\CharPoint.cs" />
+    <Compile Include="Forms\DrawPoint.cs" />
+    <Compile Include="Forms\FixedFontMeasurer.cs" />
+    <Compile Include="Forms\Formser.cs" />
+    <Compile Include="Forms\Graphicser.cs" />
+    <Compile Include="Forms\IntComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\MonthNameComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\TextComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\YearComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ftp\BaseFtpClient.cs" />
+    <Compile Include="Ftp\CommLogItem.cs" />
+    <Compile Include="Ftp\CommLogList.cs" />
+    <Compile Include="Ftp\FtpClient.cs" />
+    <Compile Include="Ftp\FtpCommandItem.cs" />
+    <Compile Include="Ftp\FtpCommandTable.cs" />
+    <Compile Include="Ftp\FtpDirEntry.cs" />
+    <Compile Include="Ftp\FtpException.cs" />
+    <Compile Include="Ftp\FtpFolderBrowserDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ftp\FtpResponse.cs" />
+    <Compile Include="Ftp\FtpResponse_DirList.cs" />
+    <Compile Include="Ftp\ReplyCodeItem.cs" />
+    <Compile Include="Ftp\ReplyLine.cs" />
+    <Compile Include="Ftp\ReplyLines.cs" />
+    <Compile Include="Ftp\TransmitBuffer.cs" />
+    <Compile Include="Ftp\TransmitBufferItem.cs" />
+    <Compile Include="COMInterop\IPreviewHandler.cs" />
+    <Compile Include="Scan\DelimPatterns.cs" />
+    <Compile Include="Scan\KeywordPattern.cs" />
+    <Compile Include="Scan\KeywordPatterns.cs" />
+    <Compile Include="Scan\MatchScanPattern.cs" />
+    <Compile Include="Scan\ScanAtomCursor.cs" />
+    <Compile Include="Text\AtomText.cs" />
+    <Compile Include="Scan\ScanAtom\CalcScanNextStart.cs" />
+    <Compile Include="Scan\ScanAtom\ScanNextAtom.cs" />
+    <Compile Include="Scan\ScanPattern.cs" />
+    <Compile Include="Scan\ScanPatternExt.cs" />
+    <Compile Include="Scan\ScanPatternResults.cs" />
+    <Compile Include="Scan\ScanPatterns.cs" />
+    <Compile Include="Scan\ScanWordCursor.cs" />
+    <Compile Include="Scan\ScanWord\CalcScanNextStart.cs" />
+    <Compile Include="Scan\ScanWord\CalcStartBx.cs" />
+    <Compile Include="Scan\ScanWord\IsolateDelim.cs" />
+    <Compile Include="Scan\ScanWord\IsolateNumericLiteral.cs" />
+    <Compile Include="Scan\ScanWord\IsolateQuotedWord.cs" />
+    <Compile Include="Scan\ScanWord\IsolateWord.cs" />
+    <Compile Include="Scan\ScanWord\IsolateWordText.cs" />
+    <Compile Include="Scan\ScanWord\ScanNextWord.cs" />
+    <Compile Include="Scan\VerbatimLiteral.cs" />
+    <Compile Include="Scan\VerbatimLiteralPattern.cs" />
+    <Compile Include="Shell\BrowserFolderDialog.cs" />
+    <Compile Include="Shell\Enums\BrowserInfoFlags.cs" />
+    <Compile Include="Shell\Enums\MessageFromBrowser.cs" />
+    <Compile Include="Shell\Enums\MessageToBrowser.cs" />
+    <Compile Include="Core\Mather.cs" />
+    <Compile Include="Text\BoundedString.cs" />
+    <Compile Include="Text\CsvBuilder.cs" />
+    <Compile Include="Text\Enums\DelimClassification.cs" />
+    <Compile Include="Text\Enums\LiteralType.cs" />
+    <Compile Include="Text\Enums\ScanAtomCode.cs" />
+    <Compile Include="Text\Enums\TextCase.cs" />
+    <Compile Include="Text\Enums\WordClassification.cs" />
+    <Compile Include="Text\Enums\WordCompositeCode.cs" />
+    <Compile Include="Text\Location\LineLocation.cs" />
+    <Compile Include="Text\Location\LineLookup.cs" />
+    <Compile Include="Text\Location\ScanLine.cs" />
+    <Compile Include="Text\Location\ScanStream.cs" />
+    <Compile Include="Text\Location\StreamLocation.cs" />
+    <Compile Include="Text\Location\TextLocationRange.cs" />
+    <Compile Include="Text\MonoCaseString.cs" />
+    <Compile Include="Text\ScanStringResults.cs" />
+    <Compile Include="Text\Location\LineIdentifier.cs" />
+    <Compile Include="Text\Location\TextLocation.cs" />
+    <Compile Include="Text\VerbatimLiteral.cs" />
+    <Compile Include="Text\Whitespace.cs" />
+    <Compile Include="Threading\ExtendedManualResetEvent.cs" />
+    <Compile Include="Threading\IThreadManagement.cs" />
+    <Compile Include="Threading\MutexWaitOne.cs" />
+    <Compile Include="PreviewHandlerHost\HostControlDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PreviewHandlerHost\PreviewHandlerHostControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PreviewHandlerHost\RegistryAccess.cs" />
+    <Compile Include="PreviewHandlerHost\StreamWrapper.cs" />
+    <Compile Include="Print\LinePrinter.cs" />
+    <Compile Include="Sql\Exceptions.cs" />
+    <Compile Include="Sql\RunSqlDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql\SqlCore.cs" />
+    <Compile Include="File\AcDirectory.cs" />
+    <Compile Include="Forms\AcColumnHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\InputBox_Wip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PercentWidthShare.cs" />
+    <Compile Include="Network\AcTcpClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\AnySocket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Logger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\Common.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\EmailAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\MailDropMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\MimeAttachment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\MimeContentTypeLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\MimeMessagePart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\MimeParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\MimeTopPart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\PartProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3Client.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3Component.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3ConnectException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3Credential.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3LoginException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3Message.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3MessageComponents.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3MessageException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3Parse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3ReceiveException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3SendException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\Pop3Statics.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\InMail\SockThreadState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\MailEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\MailMessageLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\MimeCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\OutMail\Attachment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\OutMail\MailEncoder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\OutMail\MailHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\OutMail\MailMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\OutMail\MalformedAddressException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\OutMail\OutMailer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\OutMail\ParseException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\OutMail\SmtpConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Mail\RecipientList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\MessageHeaderString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\MimeEncodedWord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\MimeHeaderLineBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\MimeHeaderLineTraits.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\NetworkCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\QuotedPrintable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\ServerConnection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\NetworkServerTransaction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\ServerTransactionCompletionInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\SocketExchange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pairs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Stacks.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StringUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextStmt\other.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TextStmt\TextStmt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Text\CsvCursor.cs" />
+    <Compile Include="Text\CsvString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Text\FilePath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Text\TextCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Text\ReplacementVariable.cs" />
+    <Compile Include="Text\Scanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Text\Scanner_ScanNextWord.cs" />
+    <Compile Include="Text\SplitResults.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Text\Stmt.cs" />
+    <Compile Include="Text\StmtElem.cs" />
+    <Compile Include="Text\StmtElem_ElemForm.cs" />
+    <Compile Include="Text\StmtElem_FirstPass.cs" />
+    <Compile Include="Text\StmtElem_Parse.cs" />
+    <Compile Include="Text\StmtTraits.cs" />
+    <Compile Include="Parse\StmtWord.cs" />
+    <Compile Include="Parse\StmtWordList.cs" />
+    <Compile Include="Parse\StmtWordListCursor.cs" />
+    <Compile Include="Text\Stringer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="File\TextLine.cs" />
+    <Compile Include="File\TextLines.cs" />
+    <Compile Include="Text\TextTraits.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Text\WordCursor.cs" />
+    <Compile Include="Text\TextWord.cs" />
+    <Compile Include="Threading\PersistentString.cs" />
+    <Compile Include="Threading\SystemWideAutoResetEvent.cs" />
+    <Compile Include="Threading\SystemWideManualResetEvent.cs" />
+    <Compile Include="Threading\SystemWideMutex.cs" />
+    <Compile Include="Windows\DependencyPropertier.cs" />
+    <Compile Include="Windows\OpenedWindows.cs" />
+    <Compile Include="Windows\WinFormDialogs.cs" />
+    <Compile Include="Ext\XElementExt.cs" />
+    <Compile Include="Xml\XmlElem.cs" />
+    <Compile Include="Xml\Xmler.cs" />
+    <Compile Include="Xml\XmlNameStack.cs" />
+    <Compile Include="Xml\XmlStream.cs" />
+    <Compile Include="Xml\XmlStringBuilder.cs" />
+    <Compile Include="Xml\XmlUnit.cs" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\FtpCommands.xml" />
+    <EmbeddedResource Include="Ftp\FtpCommand.xml" />
+    <Content Include="Parse\StmtWordNotes.txt" />
+    <Content Include="Scan\ScanWord\notes.txt" />
+    <Content Include="Text\Location\notes.txt" />
+    <Content Include="todo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

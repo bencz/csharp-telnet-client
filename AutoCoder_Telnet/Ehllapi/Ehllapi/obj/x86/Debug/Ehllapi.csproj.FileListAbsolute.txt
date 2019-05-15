@@ -1,0 +1,11 @@
+C:\SkyDrive\c#\Ehllapi\Ehllapi\bin\x86\Debug\Ehllapi.dll
+C:\SkyDrive\c#\Ehllapi\Ehllapi\bin\x86\Debug\Ehllapi.pdb
+C:\SkyDrive\c#\Ehllapi\Ehllapi\bin\x86\Debug\AutoCoder.dll
+C:\SkyDrive\c#\Ehllapi\Ehllapi\bin\x86\Debug\AutoCoder.pdb
+C:\SkyDrive\c#\Ehllapi\Ehllapi\obj\x86\Debug\Ehllapi.csprojResolveAssemblyReference.cache
+C:\SkyDrive\c#\Ehllapi\Ehllapi\obj\x86\Debug\Settings\EhllapiSettingsEntry.baml
+C:\SkyDrive\c#\Ehllapi\Ehllapi\obj\x86\Debug\Settings\EhllapiSettingsEntry.g.cs
+C:\SkyDrive\c#\Ehllapi\Ehllapi\obj\x86\Debug\Ehllapi_MarkupCompile.cache
+C:\SkyDrive\c#\Ehllapi\Ehllapi\obj\x86\Debug\Ehllapi.g.resources
+C:\SkyDrive\c#\Ehllapi\Ehllapi\obj\x86\Debug\Ehllapi.dll
+C:\SkyDrive\c#\Ehllapi\Ehllapi\obj\x86\Debug\Ehllapi.pdb

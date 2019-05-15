@@ -1,0 +1,54 @@
+﻿<Window x:Class="ScreenDefnLib.Controls.AddScreenDefnWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:telnetControls="clr-namespace:AutoCoder.Telnet.Controls;assembly=AutoCoder_Telnet"
+             xmlns:local="clr-namespace:ScreenDefnLib.Controls"
+        Width="400" Height="250" Title="{Binding ScreenTitle}"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400">
+    <Grid x:Name="LayoutRoot">
+
+    <Grid.Resources>
+      <Style TargetType="{x:Type Label}">
+        <Setter Property="Margin" Value="2,0,4,0" />
+        <Setter Property="FontWeight" Value="Bold" />
+      </Style>
+      <Style TargetType="{x:Type TextBox}">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="Padding" Value="3" />
+      </Style>
+    </Grid.Resources>
+
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <Label Grid.Row="0">Screen name</Label>
+    <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Width="150" 
+             Text="{Binding Path=ScreenName }" />
+
+    <Label Grid.Row="1">Namespace</Label>
+    <TextBox Grid.Row="1" Grid.Column="1" Width="150" HorizontalAlignment="Left"
+                     Text="{Binding Path=NamespaceName }" />
+
+    <Label Grid.Row="2">Screen dimensions</Label>
+    <telnetControls:ScreenDimControl Grid.Row="2" Grid.Column="1" ScreenDim="{Binding ScreenDim}"/>
+      
+    <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="2">
+      <Button x:Name="butAdd" Margin="5" Click="butAdd_Click">Add</Button>
+    </StackPanel>
+  </Grid>
+</Window>

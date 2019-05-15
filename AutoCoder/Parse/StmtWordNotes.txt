@@ -1,0 +1,5 @@
+﻿StmtWord class usage notes
+---------------------------
+
+CompositeCode
+  WordCompositeCode.Atom, Braced, ...

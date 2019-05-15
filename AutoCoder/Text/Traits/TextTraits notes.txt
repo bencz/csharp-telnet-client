@@ -1,0 +1,23 @@
+﻿TextTraits notes
+----------------------------------------------------
+
+... special value .... ----------------- special value starter -------------------------
+
+  Special value starter text is a property of TextTraits that indicates the start of a
+  special value.
+
+  A special value is an identifier that starts with special value text followed by
+  identifier text ( no non word patterns ).
+
+  examples of special values:  *LIBL  *CNOWIDEN *omit *nopass
+
+... special value .... --------------- special value vs keyword -----------------------
+
+  Keywords are identifiers which match pre defined values.
+
+  ScanPattern patterns added to the KeywordPatterns property of TextTraits are keywords.
+
+  When a keyword starts with a special value starter pattern, it is still a keyword. The
+  keyword classification overrides special value classification.
+
+   

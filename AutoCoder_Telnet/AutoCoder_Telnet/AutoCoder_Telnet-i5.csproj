@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E89CD7F-06DB-4672-8B7B-4D997A112019}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoCoder_Telnet</RootNamespace>
+    <AssemblyName>AutoCoder_Telnet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\InputByteArray.cs" />
+    <Compile Include="Common\TelnetLogFile.cs" />
+    <Compile Include="Common\OptionByte.cs" />
+    <Compile Include="Common\OptionVariable.cs" />
+    <Compile Include="Common\TelnetConnection.cs" />
+    <Compile Include="Enums\EnvironOptionCode.cs" />
+    <Compile Include="Enums\IBM5250\CommandCode.cs" />
+    <Compile Include="Enums\IBM5250\DataStreamOpcode.cs" />
+    <Compile Include="Enums\IBM5250\WtdOrder.cs" />
+    <Compile Include="Enums\NewEnvironSubOption.cs" />
+    <Compile Include="Enums\TelnetCommand.cs" />
+    <Compile Include="Enums\TelnetOption.cs" />
+    <Compile Include="Enums\TermTypeGroup.cs" />
+    <Compile Include="Enums\VarNameCode.cs" />
+    <Compile Include="Enums\Vt100Command.cs" />
+    <Compile Include="Exceptions\ConnectException.cs" />
+    <Compile Include="Exceptions\NotConnectedException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statements\EndOfRecordStatement.cs" />
+    <Compile Include="Statements\EndSubNegStatement.cs" />
+    <Compile Include="Statements\NawsStatement.cs" />
+    <Compile Include="Statements\NewEnvironStatement.cs" />
+    <Compile Include="Statements\TelnetStatement.cs" />
+    <Compile Include="Statements\TerminalTypeStatement.cs" />
+    <Compile Include="Statements\TransmitBinaryStatement.cs" />
+    <Compile Include="TerminalStatements\IBM5250\ClearUnitCommand.cs" />
+    <Compile Include="TerminalStatements\IBM5250\DataStreamHeader.cs" />
+    <Compile Include="TerminalStatements\IBM5250\IBM5250DataStreamCommand.cs" />
+    <Compile Include="TerminalStatements\IBM5250\WriteToDisplayCommand.cs" />
+    <Compile Include="TerminalStatements\IBM5250\WtdOrders\StartHeaderOrder.cs" />
+    <Compile Include="TerminalStatements\IBM5250\WtdOrders\TextDataOrder.cs" />
+    <Compile Include="TerminalStatements\IBM5250\WtdOrders\WtdOrderBase.cs" />
+    <Compile Include="TerminalStatements\Vt100\TerminalVt100Statement.cs" />
+    <Compile Include="TerminalStatements\Vt100\Vt100OutputText.cs" />
+    <Compile Include="TerminalStatements\Vt100\Vt100PosCursor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AutoCoder\AutoCoder.csproj">
+      <Project>{ac6039b3-9723-40b9-8569-1c16e70ffc7d}</Project>
+      <Name>AutoCoder</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

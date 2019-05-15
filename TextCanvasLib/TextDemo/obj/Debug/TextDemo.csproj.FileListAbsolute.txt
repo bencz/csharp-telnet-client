@@ -1,0 +1,17 @@
+C:\Skydrive\c#\TextCanvasLib\TextDemo\bin\Debug\TextDemo.exe.config
+C:\Skydrive\c#\TextCanvasLib\TextDemo\bin\Debug\TextDemo.exe
+C:\Skydrive\c#\TextCanvasLib\TextDemo\bin\Debug\TextDemo.pdb
+C:\Skydrive\c#\TextCanvasLib\TextDemo\bin\Debug\AutoCoder.dll
+C:\Skydrive\c#\TextCanvasLib\TextDemo\bin\Debug\TextCanvasLib.dll
+C:\Skydrive\c#\TextCanvasLib\TextDemo\bin\Debug\AutoCoder.pdb
+C:\Skydrive\c#\TextCanvasLib\TextDemo\bin\Debug\TextCanvasLib.pdb
+C:\Skydrive\c#\TextCanvasLib\TextDemo\obj\Debug\TextDemo.csprojResolveAssemblyReference.cache
+C:\Skydrive\c#\TextCanvasLib\TextDemo\obj\Debug\MainWindow.baml
+C:\Skydrive\c#\TextCanvasLib\TextDemo\obj\Debug\MainWindow.g.cs
+C:\Skydrive\c#\TextCanvasLib\TextDemo\obj\Debug\App.g.cs
+C:\Skydrive\c#\TextCanvasLib\TextDemo\obj\Debug\TextDemo_MarkupCompile.cache
+C:\Skydrive\c#\TextCanvasLib\TextDemo\obj\Debug\TextDemo.g.resources
+C:\Skydrive\c#\TextCanvasLib\TextDemo\obj\Debug\TextDemo.Properties.Resources.resources
+C:\Skydrive\c#\TextCanvasLib\TextDemo\obj\Debug\TextDemo.csproj.GenerateResource.Cache
+C:\Skydrive\c#\TextCanvasLib\TextDemo\obj\Debug\TextDemo.exe
+C:\Skydrive\c#\TextCanvasLib\TextDemo\obj\Debug\TextDemo.pdb

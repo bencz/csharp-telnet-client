@@ -1,0 +1,3 @@
+C:\src#\AutoCoder\bin\Release\AutoCoder.dll
+C:\src#\AutoCoder\bin\Release\msmdvbanet.dll
+C:\src#\AutoCoder\obj\Release\AutoCoder.dll

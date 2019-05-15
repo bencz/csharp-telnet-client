@@ -1,0 +1,5 @@
+C:\SkyDrive\c#\AutoCoder\bin\x86\Debug\AutoCoder.dll
+C:\SkyDrive\c#\AutoCoder\bin\x86\Debug\AutoCoder.pdb
+C:\SkyDrive\c#\AutoCoder\obj\x86\Debug\AutoCoder.dll
+C:\SkyDrive\c#\AutoCoder\obj\x86\Debug\AutoCoder.pdb
+C:\Skydrive\c#\AutoCoder\obj\x86\Debug\AutoCoder.csprojResolveAssemblyReference.cache

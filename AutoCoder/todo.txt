@@ -1,0 +1,36 @@
+OutMail todo
+--------------------------
+
+ 1. NetworkLogger class.
+	- replaces Logger class.
+	- add event feature: signal event on every add log entry.
+
+ 2. switch SocketExchange into async and sync mode.
+	- when in async mode need to handle send/receive timeout, show progress bar, ...
+	
+ 3. send message events
+		- have a message info class as the event argument
+			- message number
+			- event name: connect startsend endsend disconnect
+			- message file size, sent so far
+			
+ 4. handle socket timeout and especially, the shutdown of a socket in an async thread.
+ 
+ 5. OutBox class
+		- uses the MailBox table
+		- handles the queueing and sending of messages on a periodic basis
+		- popup window shows the status of the send
+		
+		
+day to day todo list
+------------------------------
+	- revisit the server authentication exchange
+		- check on folding as way to know if all the 250 responses have been
+			received from the server.
+	- fix the issue of connecting to godaddy.com server
+	- write the NetworkLogger class 
+	
+	- Puller class ?
+		- would solve the ambiguous location of the current Pull methods
+			- AcCommon of Stringer
+				      	     

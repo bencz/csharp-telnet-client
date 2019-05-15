@@ -1,0 +1,13 @@
+C:\src#\autocoder\Tester\bin\Debug\Tester.exe
+C:\src#\autocoder\Tester\bin\Debug\Tester.pdb
+C:\src#\autocoder\Tester\bin\Debug\AutoCoder.dll
+C:\src#\autocoder\Tester\bin\Debug\AutoCoder.pdb
+C:\src#\autocoder\Tester\obj\Debug\ResolveAssemblyReference.cache
+C:\src#\autocoder\Tester\obj\Debug\Tester.Properties.Resources.resources
+C:\src#\autocoder\Tester\obj\Debug\Tester.exe
+C:\src#\autocoder\Tester\obj\Debug\Tester.pdb
+C:\src#\AutoCoder\Tester\obj\Debug\GenerateResource-ResGen.read.1.tlog
+C:\src#\AutoCoder\Tester\obj\Debug\GenerateResource-ResGen.write.1.tlog
+C:\src#\AutoCoder\Tester\bin\Debug\Tester.exe.config
+C:\src#\AutoCoder\Tester\obj\Debug\GenerateResource.read.1.tlog
+C:\src#\AutoCoder\Tester\obj\Debug\GenerateResource.write.1.tlog

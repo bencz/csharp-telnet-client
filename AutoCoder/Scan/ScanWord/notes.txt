@@ -1,0 +1,23 @@
+﻿ScanWord notes
+---------------------------
+
+... LineLocation .... ---------------- location of a line in a string -----------------------------
+
+    class LineLocation
+		  {
+			  public LineIdentifier LineId ;
+				public int StartIndex ;
+		}
+		
+		// stores the start location of each line within a text stream.     
+
+... Verbatim string .... ---------- scan for words on line containing verbatime string ------------------
+
+  when splitting a string into words, process quoted strings as individual words.
+
+	in the case where a quoted string continues onto the next line ( verbatim string 
+	literals in c# ):
+	  - return from ScanNextWord method with continuation needed indicator.
+		- caller should repeat the call with the next line concatenated onto the
+		  end of the scan string. ( new line between the two strings )
+		- provider an array of LineLocation 

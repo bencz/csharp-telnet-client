@@ -1,0 +1,173 @@
+﻿<UserControl x:Class="ScreenDefnLib.Controls.SectionItemsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:ScreenDefnLib.Controls"
+             xmlns:models="clr-namespace:ScreenDefnLib.Models"
+             xmlns:acControls="clr-namespace:AutoCoder.Controls;assembly=AutoCoder"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid x:Name="LayoutRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto"></RowDefinition>
+      <RowDefinition Height="*"></RowDefinition>
+    </Grid.RowDefinitions>
+
+      <!-- popup textblock when dragging screen items to a different location or section. -->
+    <Popup x:Name="PopupWindow" IsEnabled="false" AllowsTransparency="True">
+      <Border BorderThickness="1">
+        <TextBlock x:Name="PopupText"></TextBlock>
+      </Border>
+    </Popup>
+      
+      <!-- the column heading. -->
+      <StackPanel Grid.Row="0" 
+                  Orientation="Horizontal" Background="WhiteSmoke">
+     
+      <!-- column heading. -->
+      <acControls:BorderTextBlock Text=" " Width="10" />
+      <acControls:BorderTextBlock Text="Match Num" Width="70" />
+      <acControls:BorderTextBlock Width="70" Text="Item type" NoLeftBorder="true" />
+    <acControls:BorderTextBlock Width="110" Text="Item name" NoLeftBorder="true" />
+    <acControls:BorderTextBlock Width="30" Text="Lgth" NoLeftBorder="true" />
+    <acControls:BorderTextBlock Width="50" Text="Row/Col" NoLeftBorder="true" />
+      <acControls:BorderTextBlock Width="50" Text="dspatr" NoLeftBorder="true" />
+      <acControls:BorderTextBlock Width="50" Text="Usage" NoLeftBorder="true" />
+      <acControls:BorderTextBlock Width="350" Text="Value" NoLeftBorder="true" HorizontalAlignment="Center"/>
+    </StackPanel>
+
+    <ListBox Grid.Row="1" x:Name="lbScreenItems"
+             SelectionMode="Extended"
+             PreviewKeyDown="lbScreenItems_PreviewKeyDown" 
+             PreviewMouseLeftButtonDown="lbScreenItems_MouseLeftButtonDown"
+                ItemsSource="{Binding }">
+
+      <ListBox.Resources>
+
+        <!-- style which displays the screenItem line as red text when the
+             item is marked to be cut or copied.  See the BasedOn  property
+             of styles applied to individual data templates. -->
+        <Style x:Key="tbCutCopy" TargetType = "TextBlock">
+          <Style.Triggers>
+            <DataTrigger Binding="{Binding MarkedCutOrCopy}" Value="True">
+              <Setter Property = "Foreground" Value = "Red" />
+            </DataTrigger>
+          </Style.Triggers>
+        </Style>
+
+        <DataTemplate DataType="{x:Type models:ScreenFieldModel}">
+          <DataTemplate.Resources>
+            <Style TargetType="TextBlock" BasedOn="{StaticResource tbCutCopy}" />
+          </DataTemplate.Resources>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="10"/>
+              <ColumnDefinition Width="70"></ColumnDefinition>
+              <ColumnDefinition Width="70"></ColumnDefinition>
+              <ColumnDefinition Width="110"></ColumnDefinition>
+              <ColumnDefinition Width="30"></ColumnDefinition>
+              <ColumnDefinition Width="50"></ColumnDefinition>
+              <ColumnDefinition Width="50"></ColumnDefinition>
+              <ColumnDefinition Width="50"></ColumnDefinition>
+              <ColumnDefinition Width="350"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="{Binding MatchNum}" Grid.Column="1" />
+            <TextBlock Text="{Binding ItemType}" Grid.Column="2" />
+            <TextBlock Text="{Binding ItemName}" Grid.Column="3" />
+            <TextBlock Text="{Binding Length}" Grid.Column="4" />
+            <TextBlock Text="{Binding RowColText}" Grid.Column="5" />
+            <TextBlock Text="{Binding DsplyAttrText}" Grid.Column="6" />
+            <TextBlock Text="{Binding Usage}" Grid.Column="7" />
+          </Grid>
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type models:ScreenLiteralModel}">
+          <DataTemplate.Resources>
+            <Style TargetType="TextBlock" BasedOn="{StaticResource tbCutCopy}" />
+          </DataTemplate.Resources>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="10"/>
+              <ColumnDefinition Width="70"></ColumnDefinition>
+              <ColumnDefinition Width="70"></ColumnDefinition>
+              <ColumnDefinition Width="110"></ColumnDefinition>
+              <ColumnDefinition Width="30"></ColumnDefinition>
+              <ColumnDefinition Width="50"></ColumnDefinition>
+              <ColumnDefinition Width="50"></ColumnDefinition>
+              <ColumnDefinition Width="50"></ColumnDefinition>
+              <ColumnDefinition Width="350"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="{Binding MatchNum}" Grid.Column="1" />
+            <TextBlock Text="{Binding ItemType}" Grid.Column="2" />
+            <TextBlock Text="{Binding ItemName}" Grid.Column="3" />
+            <TextBlock Text="{Binding Length}" Grid.Column="4" />
+            <TextBlock Text="{Binding RowColText}" Grid.Column="5" />
+            <TextBlock Text="{Binding DsplyAttrText}" Grid.Column="6" />
+            <TextBlock Text="{Binding Value}" Grid.Column="8" />
+          </Grid>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type models:ScreenSectionModel}">
+          <DataTemplate.Resources>
+            <Style TargetType="TextBlock" BasedOn="{StaticResource tbCutCopy}" />
+          </DataTemplate.Resources>
+          <Grid Margin="0,5,0,5">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="auto"></RowDefinition>
+              <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="10"/>
+              <ColumnDefinition Width="70"/>
+              <ColumnDefinition Width="70"></ColumnDefinition>
+              <ColumnDefinition Width="110"></ColumnDefinition>
+              <ColumnDefinition Width="30"></ColumnDefinition>
+              <ColumnDefinition Width="50"></ColumnDefinition>
+              <ColumnDefinition Width="450"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" 
+                        Orientation="Horizontal">
+             <TextBlock Width="70" Text="{Binding MatchNum}" />
+              <TextBlock Width="70" Text="{Binding ItemType}" />
+              <TextBlock Width="110" Text="{Binding ItemName}" />
+              <TextBlock Width="30"/>
+              <TextBlock Width="50" Text="{Binding RowColText}"/>
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding InfoText}"/>
+              </StackPanel>
+            </StackPanel>
+
+            <Expander Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7" 
+                 IsExpanded="{Binding Path=IsExpanded}">
+              <controls:SectionItemsControl 
+                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7"
+                SectionHeader="{Binding Path=., Mode=TwoWay}" />
+            </Expander>
+
+          </Grid>
+        </DataTemplate>
+
+      </ListBox.Resources>
+
+      <ListBox.ContextMenu>
+        <ContextMenu>
+          <MenuItem Header="Delete" Click="MenuItem_Click"></MenuItem>
+          <MenuItem Header="Change" Click="MenuItem_Click"></MenuItem>
+          <MenuItem Header="Insert" Click="MenuItem_Click"></MenuItem>
+          <MenuItem Header="Move up" Click="MenuItem_Click"/>
+          <MenuItem Header="Move down" Click="MenuItem_Click"/>
+          <MenuItem Header="Cut" InputGestureText="Ctrl+X" Click="MenuItem_Click"/>
+          <MenuItem Header="Copy" InputGestureText="Ctrl+C" Click="MenuItem_Click"/>
+          <MenuItem Header="Paste" InputGestureText="Ctrl+V" Click="MenuItem_Click"/>
+        </ContextMenu>
+      </ListBox.ContextMenu>
+    </ListBox>
+  </Grid>
+</UserControl>

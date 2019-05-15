@@ -1,0 +1,100 @@
+﻿<Window x:Class="tnClient.Windows.CaptureViewerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:acuc="clr-namespace:AutoCoder.Controls;assembly=AutoCoder"
+        xmlns:local="clr-namespace:tnClient.Windows"
+        mc:Ignorable="d"
+        Title="CaptureViewerWindow" Height="350" Width="725">
+    <Grid x:Name="LayoutRoot">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="auto"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
+        <RowDefinition Height="auto"></RowDefinition>
+      </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+      
+      <Menu HorizontalAlignment="Left"  Grid.Row="0"
+          Name="menu1" VerticalAlignment="Top" >
+        <MenuItem Header="Test" Click="MenuItem_Click"></MenuItem>
+        <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
+      </Menu>
+
+    <Grid Grid.Row="1">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="auto"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="auto"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+      <Label Grid.Row="0" Grid.Column="0" 
+                   VerticalAlignment="Center">Capture folder:</Label>
+      <acuc:FolderPathTextBoxControl
+                  Grid.Row="0" Grid.Column="1"
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Stretch"
+                               FolderPathText="{Binding CaptureFolderPath}"/>
+
+      <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="160"></ColumnDefinition>
+          <ColumnDefinition Width="2"></ColumnDefinition>
+          <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <ListView x:Name="lbLog" 
+                  SelectionChanged="lbLog_SelectionChanged"
+                  ItemsSource="{Binding RunLog}" >
+          <ListView.View>
+            <GridView>
+              <GridViewColumn Width="100" Header="File name" 
+                                    DisplayMemberBinding="{Binding fileName}"  />
+              <GridViewColumn Width="80" Header="Create date/time"  
+                                    DisplayMemberBinding="{Binding crtDate}" />
+            </GridView>
+          </ListView.View>
+        </ListView>
+
+        <!-- note: even though the splitter is only in row 0, sliding it left and right
+               also affects the column width of the columns in row 1. -->
+        <GridSplitter Background="DarkBlue" Grid.Column="1" Grid.Row="0" 
+                  Height="Auto" Width="Auto" 
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <TabControl Grid.Row="0" Grid.Column="2">
+
+          <TabItem Header="dataGrid">
+            <DataGrid ItemsSource="{Binding CaptureDataAsDataTable}">
+            </DataGrid>
+          </TabItem>
+
+          <TabItem Header="doc">
+            <RichTextBox Grid.Row="0" Grid.Column="2" x:Name="rtb1" IsDocumentEnabled="True">
+              <FlowDocument ColumnWidth="400">
+                <Paragraph>
+                  <Run Text="{Binding SelectedFileContent}"/>
+                </Paragraph>
+              </FlowDocument>
+            </RichTextBox>
+          </TabItem>
+
+          <TabItem x:Name="TabItem2" Header="ListView">
+          </TabItem>
+          
+        </TabControl>
+
+      </Grid>
+    </Grid>
+
+  </Grid>
+</Window>

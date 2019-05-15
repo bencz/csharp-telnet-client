@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="ScreenDefnLib.Controls.ScreenDefnControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:ScreenDefnLib.Controls"
+             xmlns:models="clr-namespace:ScreenDefnLib.Models"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500">
+
+  <UserControl.Resources>
+    <Style TargetType="{x:Type Button}">
+      <Setter Property="Padding" Value="3"/>
+      <Setter Property="Margin" Value="3"/>
+    </Style>
+    <Style TargetType="{x:Type TextBox}">
+      <Setter Property="VerticalAlignment" Value="Center" />
+      <Setter Property="Padding" Value="3"/>
+    </Style>
+    <Style TargetType="{x:Type TextBlock}">
+      <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+  </UserControl.Resources>
+
+
+  <Grid x:Name="TopRoot">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <Grid x:Name="LayoutRoot">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="auto"></RowDefinition>
+        <RowDefinition Height="auto"></RowDefinition>
+        <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="auto"></RowDefinition>
+    </Grid.RowDefinitions>
+      <StackPanel Grid.Row="0" Orientation="Horizontal">
+        <StackPanel.Resources>
+          <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="VerticalAlignment" Value="Center"/>
+          </Style>
+          <Style TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="VerticalAlignment" Value="Center"/>
+          </Style>
+        </StackPanel.Resources>
+        <StackPanel Orientation="Horizontal">
+          <Label>Namespace name:</Label>
+          <TextBlock Text="{Binding NamespaceName}"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10,0">
+          <Label>Screen name:</Label>
+          <TextBlock Text="{Binding ScreenName}"></TextBlock>
+        </StackPanel>
+      </StackPanel>
+
+      <!-- SectionItemsControl lists the items of the section in a listbox.
+           -->
+      <controls:SectionItemsControl Grid.Row="2" 
+                                   SectionHeader="{Binding Path=.,Mode=TwoWay}" />
+
+      <!-- at the bottom of the control are buttons for specific actions to apply to the
+         list of screen of items. Delete or change a selected item. or add a new item. 
+         -->
+    <StackPanel Grid.Row="3" Orientation="Horizontal">
+      <Button x:Name="butAdd" Click="butAdd_Click">Add</Button>
+        <Button x:Name="butClear" Click="butClear_Click" >Clear</Button>
+        <Button x:Name="butImport" Click="butImport_Click" >Import</Button>
+        <Button x:Name="butTest" Click="butTest_Click" Content="Text" />
+        <Button x:Name="butReport" Click="butReport_Click"  Content="Report to clipboard" />
+      </StackPanel>
+  </Grid>
+  </Grid>
+</UserControl>

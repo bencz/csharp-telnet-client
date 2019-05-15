@@ -1,0 +1,7 @@
+C:\Skydrive\c#\TextCanvasLib\TextCanvasLib\bin\x86\Debug\TextCanvasLib.dll
+C:\Skydrive\c#\TextCanvasLib\TextCanvasLib\bin\x86\Debug\TextCanvasLib.pdb
+C:\Skydrive\c#\TextCanvasLib\TextCanvasLib\bin\x86\Debug\AutoCoder.dll
+C:\Skydrive\c#\TextCanvasLib\TextCanvasLib\bin\x86\Debug\AutoCoder.pdb
+C:\Skydrive\c#\TextCanvasLib\TextCanvasLib\obj\x86\Debug\TextCanvasLib.csprojResolveAssemblyReference.cache
+C:\Skydrive\c#\TextCanvasLib\TextCanvasLib\obj\x86\Debug\TextCanvasLib.dll
+C:\Skydrive\c#\TextCanvasLib\TextCanvasLib\obj\x86\Debug\TextCanvasLib.pdb

@@ -1,0 +1,155 @@
+﻿<Window x:Class="AutoCoder.Ehllapi.Settings.EhllapiSettingsEntry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EhllapiSettingsEntry" Height="400" Width="450">
+
+  <Window.Resources>
+    <Style TargetType="{x:Type TextBox}">
+      <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style TargetType="{x:Type TextBlock}">
+      <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+  </Window.Resources>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto"></RowDefinition>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="auto"></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <Menu Grid.Row="0" 
+          HorizontalAlignment="Left"  
+          Name="menu1" VerticalAlignment="Top" >
+      <MenuItem Header="Test" Click="MenuItem_Click"></MenuItem>
+      <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
+      <MenuItem Header="Session">
+        <MenuItem Header="Start" Click="Menu_Session_Start"/>
+        <MenuItem Header="End" Click="Menu_Session_End"/>
+      </MenuItem>
+      <MenuItem Header="Play script">
+        <MenuItem Header="Signon" Click="Menu_Script_Signon"/>
+        <MenuItem Header="Signoff" Click="Menu_Script_Signoff"/>
+      </MenuItem>
+    </Menu>
+
+    <Grid Grid.Column="0" Grid.Row="1" 
+            x:Name="grdSettingsPrompt">
+
+      <Grid.Resources>
+        <Style TargetType="{x:Type Label}">
+          <Setter Property="Margin" Value="2,0,4,0" />
+          <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+      </Grid.Resources>
+
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+        <RowDefinition Height="Auto"></RowDefinition>
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <Label Grid.Row="0">System name</Label>
+      <TextBox Grid.Row="0" Grid.Column="1"
+               HorizontalAlignment="Left"
+               MinWidth="100"
+               x:Name="tbSystemName"
+               Text="{Binding Path=SystemName }" />
+
+      <Label Grid.Row="1">User name</Label>
+      <TextBox Grid.Row="1" Grid.Column="1" MinWidth="100" 
+                     HorizontalAlignment="Left"
+                     Text="{Binding Path=UserName }" />
+
+      <Label Grid.Row="2">Password</Label>
+      <TextBox Grid.Row="2" Grid.Column="1" MinWidth="100" 
+                     HorizontalAlignment="Left"
+                     Text="{Binding Path=Password }" />
+
+      <Label Grid.Row="3">Session ID</Label>
+      <TextBox Grid.Row="3" Grid.Column="1" MinWidth="100" 
+                     HorizontalAlignment="Left"
+                     Text="{Binding Path=SessId }" />
+
+      <Label Grid.Row="4">Workstation profile path</Label>
+      <DockPanel LastChildFill="True"
+                 Grid.Row="4" Grid.Column="1">
+
+        <Button x:Name="butWrkstnProfile" DockPanel.Dock="Right"
+                Margin="0,3"
+                Content="..."
+                Click="butWrkstnProfile_Click" />
+        <TextBox       HorizontalAlignment="Left"
+                     Text="{Binding Path=Path_WrkstnProfile }" />
+      </DockPanel>
+
+      <Label Grid.Row="5">CWBLogon.exe path</Label>
+      <DockPanel LastChildFill="True"
+                 Grid.Row="5" Grid.Column="1">
+
+        <Button x:Name="butCwblogon" DockPanel.Dock="Right"
+                Margin="0,3"
+                Content="..."
+                Click="butCwblogon_Click" />
+        <TextBox       HorizontalAlignment="Left"
+                     Text="{Binding Path=Path_cwblogon }" />
+      </DockPanel>
+
+      <Label Grid.Row="6">Pcsws.exe path</Label>
+      <DockPanel LastChildFill="True"
+                 Grid.Row="6" Grid.Column="1">
+
+        <Button x:Name="butPcsws" DockPanel.Dock="Right"
+                Margin="0,3"
+                Content="..."
+                Click="butPcsws_Click" />
+        <TextBox       HorizontalAlignment="Left"
+                     Text="{Binding Path=Path_pcsws }" />
+      </DockPanel>
+
+      <Label Grid.Row="7">Emulator directory path</Label>
+      <DockPanel LastChildFill="True"
+                 Grid.Row="7" Grid.Column="1">
+
+        <Button x:Name="butEmulatorDirPath"  DockPanel.Dock="Right"
+                Margin="0,3"
+                Content="..."
+                Click="butEmulatorDirPath_Click" />
+        <TextBox       HorizontalAlignment="Left"
+                     Text="{Binding Path=DirPath_Emulator }" />
+      </DockPanel>
+
+      <!-- OK and Cancel buttons on bottom row. -->
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+                  Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2">
+        <Button x:Name="butOK" Content=" OK " Padding="3" Margin="3"
+                Click="butOK_Click" />
+        <Button x:Name="butCancel" Content="Cancel" Padding="3" Margin="10,3"
+                Click="butCancel_Click" />
+      </StackPanel>
+
+    </Grid>
+
+    <StatusBar Grid.Row="2" Grid.Column="0">
+      <StatusBarItem>
+        <TextBlock x:Name="tbStatusBarMessage" />
+      </StatusBarItem>
+
+    </StatusBar>
+
+  </Grid>
+
+</Window>
